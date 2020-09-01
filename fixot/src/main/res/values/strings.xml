@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+
+<resources>
+
+    <string name="normal_theme" translatable="false">normal_theme</string>
+
+    <string name="current_version">Current Version:</string>
+
+    <string name="version_number">Version Number</string>
+
+    <string name="font_size">Font Size</string>
+
+    <string name="username">Username</string>
+
+    <string name="remember_me">Remember Me</string>
+
+    <string name="sign_in">Sign in</string>
+
+    <string name="confirm">OK</string>
+
+    <string name="loginExpired">Another user has logged in with your same credentials, for security reason you will be logged out</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="password">Password</string>
+
+    <string name="download_cbk">Download CBK Mobile App from play Store</string>
+
+    <string name="sender_id" translatable="false">689200307400</string>
+
+    <string name="allow_finger_print" translatable="false">allow_finger_print</string>
+
+    <string name="saved_pass" translatable="false">saved_pass</string>
+
+    <string name="no_data">No Data</string>
+
+    <string name="no_net">Couldn\'t connect to the server. Please check your network connection.</string>
+
+    <string name="all_sectors">All sectors</string>
+    <string name="all">All</string>
+    <string name="not_loaded_yet">Stocks are not loaded yet. please wait and try again later</string>
+
+    <string name="no_result_message">Sorry we could not find any match!</string>
+
+    <string name="brokers_xml_1">http://www.ids-lb.com/iphone/FixBrokers.xml</string>
+
+    <string name="brokers_xml_2">https://www.ids-support.com/iphone/fixbrokers.xml</string>
+
+    <string name="beforekey">6aaac758332a8320840ac0e5f8fc28e2</string>
+
+    <string name="regId" translatable="false">regId</string>
+
+    <string name="registered" translatable="false">false</string>
+
+    <string name="afterkey" translatable="false" />
+
+    <string name="instrument_title">Instrument</string>
+
+    <string name="NMS">NMS</string>
+
+    <string name="symbol">Stock</string>
+
+    <string name="stocks_no">Stocks No</string>
+
+    <string name="to_date">To Date</string>
+
+    <string name="from_date">From Date</string>
+
+    <string name="almowazi">Unlisted</string>
+
+    <string name="change_percent">Change%</string>
+
+    <string name="time">Time</string>
+
+    <string name="tops">Tops</string>
+
+    <string name="summary">Summary</string>
+
+    <string name="settings">Settings</string>
+
+    <string name="change">Change</string>
+
+    <string name="bid">Bid</string>
+
+    <string name="ask">Ask</string>
+
+    <string name="amount">Amount</string>
+
+    <string name="hi_limit">Hi Limit</string>
+
+    <string name="high">High</string>
+
+    <string name="is_islamic">Is Islamic</string>
+
+    <string name="last">Last</string>
+
+    <string name="low">Low</string>
+
+    <string name="low_limit">Low Limit</string>
+
+    <string name="open">Open</string>
+
+    <string name="stock_id">Stock</string>
+
+    <string name="error">Error</string>
+
+    <string name="save_success">Stock Saved.</string>
+
+    <string name="delete_success">Stock Deleted.</string>
+
+    <string name="save">OK</string>
+
+    <string name="submit">Submit</string>
+
+    <string name="review_button">Review</string>
+
+    <string name="trades_total_title">Total</string>
+
+    <string name="trades_commission_title">Brokerage</string>
+
+    <string name="trades_total_cost_title">Overall Total</string>
+
+    <string name="duration_type_title">Duration:</string>
+
+    <string name="price_choose_title">Limit</string>
+
+    <string name="market_price_title">Market Price</string>
+
+    <string name="t_quantity_title">Qty:</string>
+
+    <string name="Fill">Fill</string>
+
+    <string name="t_price_title">Price:</string>
+
+    <string name="sell_title">Sell</string>
+
+    <string name="buy_title">Buy</string>
+
+    <string name="high_limit">High</string>
+
+    <string name="type">Type</string>
+
+    <string name="trading_value">Trading Value</string>
+
+    <string name="trades_last_ask_title">Ask</string>
+
+    <string name="trades_last_bid_title">Bid</string>
+
+    <string name="error_purchase_power">You have insufficient balance to do this deal </string>
+
+    <string name="error_share_count">Required quantity for this stock is not available</string>
+
+    <string name="stock_last_price_title">Market Price</string>
+
+    <string name="last_price_title">Last</string>
+
+    <string name="close_title">Closing</string>
+
+    <string name="close">Close</string>
+
+    <string name="quantity_title">Qty</string>
+
+    <string name="executed_quantity_title">Executed Qty</string>
+
+    <string name="action">Action</string>
+
+    <string name="new_account">New Account</string>
+
+    <string name="status">Status</string>
+
+    <string name="trades_page_title">Trade Execution</string>
+
+    <string name="trades_confirmation_page_title">Trade Confirmation</string>
+
+    <string name="stock_trading_status">Stock Trading Status</string>
+
+    <string name="trades">Trades</string>
+
+    <string name="volume">Volume</string>
+
+    <string name="volume_ask">Volume Ask</string>
+
+    <string name="volume_bid">Volume Bid</string>
+
+    <string name="ask_quantity">Ask Qty.</string>
+
+    <string name="bid_quantity">Bid Qty.</string>
+
+    <string name="ask_number">Ask no.</string>
+
+    <string name="bid_number">Bid no.</string>
+
+    <string name="price">Price</string>
+
+    <string name="portfolio_number">Portfolio Number</string>
+
+    <string name="date">Date</string>
+
+    <string name="buy">Buy</string>
+
+    <string name="sell">Sell</string>
+
+    <string name="quantity">Qty</string>
+
+    <string name="place_order">Place Order</string>
+
+    <string name="add_order">Add Order</string>
+
+    <string name="ersal_order">Send Order</string>
+
+    <string name="update_order">Update Order</string>
+
+    <string name="cancel_order">Cancel Order</string>
+
+    <string name="activate_order">Activate</string>
+    <string name="sector_name">Name</string>
+    <string name="error_code">We have some trouble , Code error : </string>
+
+
+    <!-- Password pages -->
+    <string name="change_password">Change password</string>
+    <string name="new_password">New password :</string>
+    <string name="old_password">Old password :</string>
+    <string name="verify_password">Verify password :</string>
+
+    <string name="PasswordNoCtrlChr">Password policy: Must not contain the following characters</string>
+    <string name="PasswordLength">Password policy: Length should be between</string>
+    <string name="PasswordContainSpaces">Password policy: Space is not allowed</string>
+    <string name="PasswordNotSortedAlphab">Password policy: Consecutive characters are not allowed</string>
+    <string name="PasswordNotSortedNumeric">Password policy: Consecutive number are not allowed</string>
+    <string name="PasswordNo2RepeatedChar">Password policy: Must not contain 3 Repeated Characters or numbers</string>
+    <string name="PasswordAlphanumeric">Password policy: Must be number and charactere</string>
+    <string name="ComplexPassOff1">Password policy:\n  * Must not contain the following characters.\n  * Length should be between </string>
+    <string name="ComplexPassOff2"> characters\n  * Space is not allowed</string>
+    <string name="ComplexPassOn">\n  * Consecutive characters and number are not allowed \n  * Must not contain 3 Repeated Characters or numbers</string>
+    <string name="and"> and </string>
+
+    <!-- Login page -->
+    <string name="errorlogin">Please fill username and password</string>
+    <string name="errorupdate">Please fill All Field</string>
+    <string name="errorVerify">The New Password and Verify Password is not identical</string>
+    <string name="updatesuccessful">the password is update successful</string>
+
+    <string name="trading_number">Trading number</string>
+    <string name="email">Email</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="mobile_number">Mobile Number</string>
+
+
+    <!-- Settings page -->
+    <string name="change_language">Language Settings</string>
+    <string name="push_notification">Notifications</string>
+
+    <string name="forgot_password">Forgot password?</string>
+    <string name="registerOnAlMowazi">Register via AlMowazi</string>
+    <string name="forgot_username">Forgot username?</string>
+    <string name="reactivate_account">Re-Activate Account</string>
+    <string name="account_statement_title">Account statement</string>
+    <string name="pdf_kcc_text">Account Statement as Rep200</string>
+    <string name="login_contactus">Contact Us</string>
+    <string name="login_board">Board of Directors</string>
+    <string name="login_terms">CMA Announcements</string>
+    <string name="login_about">About Us</string>
+
+
+    <!-- market status values -->
+    <string name="ms_open"> Open</string>
+    <string name="ms_closed"> Closed</string>
+    <string name="ms_preopen">Pre Open</string>
+    <string name="ms_startofday">Start Of Day</string>
+    <string name="ms_acceptance">Acceptance</string>
+    <string name="ms_closing">Closing Auction</string>
+    <string name="ms_Inquiry">Inquiry</string>
+
+
+    <string name="trading_info">Trading Info</string>
+    <string name="membership_terms">Membership terms</string>
+    <string name="market_state_title">Market Status:</string>
+    <string name="market_time_title">Market Time:</string>
+    <string name="last_weight_title">Weight Index</string>
+    <string name="change_weight_title">Weight change</string>
+    <string name="change_weight_percent_title">Change%</string>
+    <string name="value_weight_title">Amount</string>
+    <string name="trades_title">Trades</string>
+    <string name="amount_title">Value</string>
+    <string name="volume_title">Volume</string>
+
+
+    <!-- menu page titles -->
+    <string name="market_index">Market Index</string>
+    <string name="sectors">Sectors</string>
+    <string name="stock">Stocks</string>
+    <string name="time_sales">Trades</string>
+    <string name="top_trades">Trades</string>
+    <string name="top_value">Value</string>
+    <string name="top_gainer">Gainers</string>
+    <string name="top_looser">Losers</string>
+    <string name="top_traded">Volume</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="orders">Orders</string>
+    <string name="news">News</string>
+    <string name="favorite">Favorites</string>
+    <string name="links">Quick Links</string>
+    <string name="order_book">Order Book </string>
+    <string name="register">Register</string>
+    <string name="order_details">Order Details</string>
+    <string name="edit">Edit</string>
+
+    <!-- stocklist page -->
+    <string name="change_title">Change</string>
+    <string name="price_title">Price</string>
+    <string name="stock_name_title">Stock</string>
+    <string name="search">Search</string>
+    <string name="session_title">Session</string>
+    <string name="choose_instrument_all">All</string>
+    <string name="sector">Sector</string>
+
+
+    <!-- tradeorder object titles -->
+    <string name="reference_title">Reference:</string>
+    <string name="tradetype_title"> Action:</string>
+    <string name="oldprice_title"> Old Price:</string>
+    <string name="executedquantity_title">Qty Deal:</string>
+    <string name="orderdate_title"> Action time:</string>
+    <string name="orderdurationtype_title">  Duration:</string>
+    <string name="gooduntilldate_title"> Good Until:</string>
+    <string name="status_title"> Status:</string>
+
+
+    <!-- menufooter case text -->
+    <string name="menu_marketindex">Market Index</string>
+    <string name="menu_portfolio">Portfolio</string>
+    <string name="menu_orders">My Orders</string>
+    <string name="menu_stocks">Stocks</string>
+    <string name="menu_islamic_stocks">Islamic Stocks</string>
+    <string name="menu_OffMarketQuotes">Special Trades</string>
+    <string name="Dark_Theme">Dark Theme</string>
+    <string name="menu_sectors">Sectors</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_mowazi">Unlisted</string>
+    <string name="source">ٍSource</string>
+    <string name="lastdeals">Latest Deals</string>
+    <string name="menu_bond_prices">Bond prices</string>
+    <string name="menu_more">More</string>
+    <string name="menu_top_traded"> Top Volume</string>
+    <string name="menu_top_trades">Top Trades </string>
+
+    <string name="more">More</string>
+    <!-- userData object titles -->
+    <string name="limit_title">Margin</string>
+    <string name="credit_title">Credit</string>
+    <string name="pending_title">Pending Orders</string>
+    <string name="debit_title"> Debit </string>
+    <string name="bank_balance_title">Bank Balance</string>
+    <string name="available_withdrawal">Available for withdrawal</string>
+    <string name="amount_under_issue">Amounts under Issue</string>
+    <string name="Total_portfolio_title">Total Portfolio</string>
+    <string name="purchase_power_title">Purchase Power</string>
+    <string name="trade_purchase_power_title">Purchase Power</string>
+    <string name="exit_app_question"> Do you want to exit the application?</string>
+    <string name="logout_app_question"> Do you want to logout ?</string>
+    <string name="exit">Exit</string>
+
+    <!-- portfolio -->
+    <string name="pdf_text">Account statement</string>
+    <string name="unrealized_title">Gain/Loss</string>
+    <string name="bid_ask_title">Avg Price</string>
+    <string name="quantity_cost_title">Shares-Value</string>
+    <string name="Shares">Shares</string>
+    <string name="Value">Value</string>
+    <string name="trading_title">Trade</string>
+    <string name="delete">Delete</string>
+    <string name="symbol_title">Symbol</string>
+
+    <string name="cancelOrderSuccess">Canceling has been sent</string>
+    <string name="cancelOrderError">you cannot cancel the order</string>
+
+    <!-- forward stock header titles -->
+    <string name="fs_symbol">Symbol</string>
+    <string name="fs_num">Co No.</string>
+    <string name="fs_date">Date</string>
+    <string name="fs_org_qtty">Original Qty</string>
+    <string name="fs_rem_qtty">Rem. Qty</string>
+    <string name="fs_cost">Cost</string>
+    <string name="fs_bprice">B. Price</string>
+    <string name="fs_rem_cost">Rem. Cost</string>
+    <string name="fs_due_date">Due Date</string>
+
+    <string name="noData">No data to display</string>
+    <string name="logout">Logout</string>
+
+
+    <!-- stock object titles -->
+    <string name="stock_bid_title">Bid</string>
+    <string name="stock_ask_title">Ask</string>
+    <string name="stock_high_title">High</string>
+    <string name="stock_low_title">Low</string>
+    <string name="stock_open_title">Open</string>
+    <string name="stock_previous_title">Previous Closing</string>
+    <string name="stock_value_title">Last</string>
+    <string name="stock_trades_title">Trades</string>
+    <string name="stock_change_title">Change</string>
+    <string name="stock_volume_title">Volume</string>
+    <string name="stock_amount_title">Value</string>
+    <string name="stock_change_percent_title">Change%</string>
+    <string name="stock_bid_quantity_title">Bid Qty</string>
+    <string name="stock_ask_quantity_title">Ask Qty</string>
+
+
+    <string name="enter_pin">Enter Pin</string>
+
+    <string name="pin">Pin :</string>
+
+    <string name="duration_type">Duration</string>
+    <string name="trade_duration_type">Duration Type</string>
+    <string name="trade_date">Trade Date</string>
+    <string name="login">Login</string>
+
+    <string name="send_button">Send</string>
+    <string name="update_button">Update</string>
+    <string name="update_title">Update Available</string>
+    <string name="update_message">New version is available, please update</string>
+    <string name="update_ok">OK</string>
+    <string name="update_cancel">Cancel</string>
+    <string name="powered_by_almowazi_com">Powered by Almowazi.com</string>
+    <string name="mowazi_company">Companies</string>
+    <string name="mowazi_companies">Companies\' Info</string>
+    <string name="mowazi_place_order">Place an Order</string>
+    <string name="mowazi_news">News</string>
+    <string name="mowazi_orders">Orders Summary</string>
+    <string name="mowazi_latest_orders">Latest Orders</string>
+    <string name="mowazi_trades">Latest Deals</string>
+    <string name="mowazi_my_orders">My Orders</string>
+    <string name="mowazi_my_trade">My Trades</string>
+    <string name="mowazi_namesymbol">Symbol</string>
+    <string name="mowazi_lastupdate">Last modification</string>
+    <string name="mowazi_forbid">For Bid</string>
+    <string name="mowazi_untransformed">Is Issue</string>
+    <string name="mowazi_clear">Clear</string>
+    <string name="mowazi_searchHint">Search company</string>
+    <string name="mowazi_lastdealdate">Last deal date:</string>
+    <string name="mowazi_lastprice">Last price:</string>
+    <string name="mowazi_about">About the company</string>
+    <string name="mowazi_companyDetailDeals">Deals</string>
+    <string name="mowazi_chart">Chart</string>
+    <string name="mowazi_financialstatement">Financial statements</string>
+    <string name="mowazi_companyDetailOrders">Orders</string>
+    <string name="mowazi_tradeheader">trade</string>
+    <string name="mowazi_no_details">Currently there is no data</string>
+    <string name="mowazi_from">From</string>
+    <string name="mowazi_to">To</string>
+    <string name="mowazi_dealPrice">Fils</string>
+    <string name="mowazi_noenglishnews">English news is not available at this moment.</string>
+    <string name="mowazi_assemblyNews">Assembly News</string>
+    <string name="mowazi_generalNews">General News</string>
+    <string name="mowazi_companyNews">Company News</string>
+    <string name="mowazi_dinar">Dinar</string>
+    <string name="mowazi_total">Total</string>
+    <string name="mowazi_commission">Commission</string>
+    <string name="mowazi_totalandcommission">Total and Commission</string>
+    <string name="mowazi_valid_until">Valid Until</string>
+    <string name="mowazi_orderSuccess">Order Placed Successfully</string>
+    <string name="mowazi_cancellation">Cancel</string>
+    <string name="mowazi_orderAlert">The order will expire in 30 days, you can reactivate it from My Orders page</string>
+    <string name="mowazi_orderDetails">Order Details</string>
+    <string name="mowazi_sendOrderTitle">Send Order</string>
+    <string name="mowazi_sendOrder">Are you sure you want to send the order?</string>
+    <string name="mowazi_alertOrder">Please Choose Order Type and Company</string>
+    <string name="mowazi_deleteOrderTitle">Delete Order</string>
+    <string name="mowazi_updateOrder">Update Order</string>
+    <string name="mowazi_deleteOrder">Are you sure you want to delete the order?</string>
+    <string name="mowazi_updategoodcancel">This is an expired order that will be automatically activated, order duration will be renewed for 30 days, do you want to continue?</string>
+    <string name="mowazi_dateAlert">Please choose a valid Date</string>
+    <string name="mowazi_noChanges">No Updates occurred in the fields</string>
+    <string name="mowazi_alertCompany">Please Choose Company</string>
+    <string name="mowazi_alertPrice">Please Enter Price</string>
+    <string name="mowazi_alertQuantity">Please Enter Quantity</string>
+    <string name="mowazi_bid_quantity_title">Bid Qty</string>
+    <string name="mowazi_last_bidprice">Last bid price</string>
+    <string name="mowazi_last_askprice">Last ask price</string>
+    <string name="mowazi_ask_quantity_title">Ask Qty</string>
+    <string name="mowazi_bp_bidprice_title">Bid Price</string>
+    <string name="mowazi_bp_askprice_title">Ask Price</string>
+    <string name="mowazi_ask_count">Ask count</string>
+    <string name="mowazi_bid_count">Bid count</string>
+    <string name="mowazi_orderAsk">Ask</string>
+    <string name="mowazi_orderedQuantity">Original shares</string>
+    <string name="mowazi_offeredQuantity">Offered Qty</string>
+    <string name="mowazi_orderBid">Bid</string>
+    <string name="mowazi_mouwaziorders">Latest Orders</string>
+    <string name="mowazi_pendingquantity">Remaining shares</string>
+    <string name="mowazi_executedqty">Executed shares</string>
+    <string name="mowazi_orderType">Order Type</string>
+    <string name="mowazi_originalShares">Original Shares</string>
+    <string name="mowazi_executedShares">Executed Shares</string>
+    <string name="mowazi_mowazideals">Mowazi Deals</string>
+    <string name="mowazi_averagePrice">Average Price</string>
+    <string name="mowazi_count">Count</string>
+    <string name="mowazi_value">Value</string>
+    <string name="mowazi_trade">My Trades</string>
+    <string name="interactive_login">Interactive Login</string>
+    <string name="normal_login">Password Login</string>
+    <string name="biometric_login">Continue With Finger print</string>
+    <string name="pdf_error">To be able to open the file you must load the special program. Please wait and try again after loading.</string>
+
+    <string name="generate">Generate</string>
+    <string name="skip">Skip</string>
+    <string name="stock_details">Stock Details</string>
+    <string name="fingerprint_title">Login with Finger print</string>
+    <string name="fingerprint_neutral">Place your fingerprint</string>
+    <string name="fingerprint_success">Fingerprint Recognized.</string>
+    <string name="fingerprint_failure">Fingerprint not Recognized.\nPlease try again.</string>
+    <string name="private_order">Private Order</string>
+    <string name="select_date">Select Date</string>
+    <string name="cancel_order_text">Are you sure you want to cancel the order?</string>
+    <string name="activate_order_text">Are you sure you want to activate the order?</string>
+    <string name="fast_edit">Fast Edit</string>
+    <string name="quick_edit">Quick Edit</string>
+    <string name="order_options">Order Options</string>
+    <string name="lang">عربي</string>
+    <string name="account_statement_grp">Grouped Account Statement</string>
+    <string name="account_statement_report">Report</string>
+
+    <string name="total_value">Total Value</string>
+    <string name="total_gain_loss">Total\nGain/Loss</string>
+
+    <string name="MarketSegment_ALL">All</string>
+    <string name="MarketSegment_REG">REG</string>
+    <string name="MarketSegment_FUNDS">FUNDS</string>
+
+    <string name="otcMsg">Real Time Information transmitted by Boursa Kuwait in accordance with the terms and conditions of the Information License Agreement</string>
+    <string name="check_data">Please check your data entry</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+
+    <string name="termAndcondition"></string>
+    <string name="plztermAndcondition"></string>
+    <string name="opentermAndcondition"></string>
+
+    <string name="Order_Book_by_order">Order Book by Order</string>
+    <string name="Order_Book_by_price">Order Book Price</string>
+
+    <string name="order_filter_1">Open</string>
+    <string name="order_filter_2">Executed</string>
+    <string name="order_filter_3">Cancelled</string>
+
+    <string name="communityHome">General Assembly</string>
+    <string name="bottom_home">home</string>
+    <string name="bottom_favorite">favorite</string>
+    <string name="bottom_otc">OTC</string>
+    <string name="previousCommunities">Previous General Communities</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="clear">Clear</string>
+    <string name="communities">General communities</string>
+
+    <string name="year">Year</string>
+    <string name="orgType">Community Type</string>
+    <string name="capitalKWD">Capital KWD</string>
+    <string name="organization">Organization</string>
+    <string name="normalAssembly">Normal</string>
+    <string name="unnormalAssembly">UbNormal</string>
+    <string name="normUnnormAssembly">Normal &amp; UbNormal</string>
+    <string name="establishedAssembly">Established</string>
+    <string name="upcomingCommunities">Upcoming General Communities</string>
+    <string name="resultCommunities">General Communities Result</string>
+    <string name="company">Company</string>
+    <string name="communityType">Type</string>
+    <string name="companies">Companies\' Info</string>
+    <string name="favoriteAdd">Added to favorites</string>
+    <string name="favoriteRemoved">Removed from favorites</string>
+    <string name="notification_save">Notifications Settings Saved</string>
+    <string name="chart">Chart</string>
+    <string name="charthint">Touch chart to see accurate values!</string>
+    <string name="gotit">GOT IT</string>
+    <string name="lastdealdate">Last deal date:</string>
+    <string name="lastprice">Last price:</string>
+    <string name="about">About the Company</string>
+    <string name="companyDetailDeals">Deals</string>
+    <string name="financialstatement">Financial statements</string>
+    <string name="companyDetailOrders">Orders</string>
+    <string name="tradeheader">Trade</string>
+    <string name="generalNews">General News</string>
+    <string name="tradess">Trades</string>
+    <string name="orderss">Market Orders</string>
+    <string name="live_prices">Live Market</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

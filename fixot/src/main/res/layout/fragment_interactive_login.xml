@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/margin_start_end"
+    android:layout_marginTop="@dimen/margin_top_bottom"
+    android:layout_marginEnd="@dimen/margin_start_end"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/margin_top_bottom"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        android:padding="5dp"
+        android:text="@string/username"
+        android:textColor="@color/colorValues"
+        android:textSize="@dimen/large" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/margin_top_bottom"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        android:background="@drawable/edittext_border"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:padding="5dp"
+        android:textAlignment="viewStart" />
+
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginTop="@dimen/margin_top_bottom"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        android:layout_marginBottom="@dimen/margin_top_bottom"
+        android:background="@color/colorDark"
+        android:clipToPadding="false"
+        android:elevation="@dimen/button_elevation"
+        android:onClick="Login"
+        android:padding="@dimen/mini_margin"
+        android:text="@string/biometric_login"
+        android:textColor="@color/colorLight" />
+
+</LinearLayout>

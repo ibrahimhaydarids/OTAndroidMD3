@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorLight"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--android:background="?attr/colorDark"-->
+    <!--android:background="@color/white"-->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorDarkHeader"
+        android:elevation="4dp"
+        android:layoutDirection="ltr"
+        android:title="null">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="back"
+            android:padding="@dimen/padding"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding"
+            android:textColor="?attr/colorValues"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/status"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal|center_vertical|end"
+            android:layout_margin="8dp"
+            android:padding="5dp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutChangeLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:background="?attr/colorLight"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/rgLanguage"
+                android:text="@string/change_language"
+                android:textAlignment="viewStart"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/normal" />
+
+
+            <RadioGroup
+                android:id="@+id/rgLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbArabic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/mini_margin"
+                    android:buttonTint="?attr/colorDark"
+                    android:text="عربي"
+                    android:textColor="?attr/colorValues"
+                    android:textSize="@dimen/normal" />
+
+                <RadioButton
+                    android:id="@+id/rbEnglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:buttonTint="?attr/colorDark"
+                    android:text="English"
+                    android:textColor="?attr/colorValues"
+                    android:textSize="@dimen/normal" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutPushNotification"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:background="?attr/evenColor"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="start"
+                android:text="@string/push_notification"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/normal" />
+
+            <Switch
+                android:id="@+id/switchNot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/mini_margin"
+                android:checked="true"
+                android:thumbTint="?attr/colorDark" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layoutThemes"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:background="?attr/colorLight"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="start"
+                android:text="@string/Dark_Theme"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/normal" />
+
+            <Switch
+                android:id="@+id/switchDarckTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/mini_margin"
+                android:checked="false"
+                android:thumbTint="?attr/colorDark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutFingerPrint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:background="?attr/evenColor"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="start"
+                android:text="@string/fingerprint_title"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/normal" />
+
+            <Switch
+                android:id="@+id/switchFingerprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/mini_margin"
+                android:checked="true"
+                android:thumbTint="?attr/colorDark" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layoutVersionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:background="?attr/evenColor"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="start"
+                android:text="@string/version_number"
+                android:textColor="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvVersionNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding"
+                android:showText="true"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/normal" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/layoutChangeFont"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:visibility="gone"
+            android:background="?attr/evenColor"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="start"
+                android:text="@string/font_size"
+                android:textColor="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvChangeFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="@string/change"
+                android:padding="@dimen/padding"
+                android:textStyle="bold"
+                android:showText="true"
+                android:textColor="?attr/colorDark"
+                android:textSize="@dimen/normal" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/changePassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:padding="@dimen/padding"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:gravity="start"
+                android:text="@string/change_password"
+                android:textColor="?attr/colorValues" />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:rotation="180"
+                android:src="@drawable/back"
+                android:tint="@color/colorValues" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

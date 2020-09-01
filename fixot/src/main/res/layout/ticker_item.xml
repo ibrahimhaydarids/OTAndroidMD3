@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlTickerItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvSectorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:minLines="1"
+        android:paddingTop="@dimen/mini_padding"
+        android:paddingBottom="@dimen/mini_padding"
+        android:text="symbol"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="1dp"
+        android:layout_toEndOf="@+id/tvSectorName"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:minLines="1"
+        android:paddingTop="@dimen/mini_padding"
+        android:paddingBottom="@dimen/mini_padding"
+        android:text="@string/ask"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toEndOf="@+id/tvprice"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:maxLines="1"
+        android:minLines="1"
+        android:paddingTop="@dimen/mini_padding"
+        android:paddingBottom="@dimen/mini_padding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+
+</RelativeLayout>

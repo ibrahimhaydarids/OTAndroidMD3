@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorLight"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlTickers">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlTickers">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/my_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorDarkHeader"
+                    android:elevation="4dp"
+                    android:title="null">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="back"
+                            android:padding="@dimen/padding"
+                            android:src="@drawable/back"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvLogout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center_vertical"
+                            android:layout_weight="1"
+                            android:paddingStart="@dimen/padding"
+                            android:paddingEnd="@dimen/padding"
+                            android:text="@string/logout"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/logout_dimension"
+                            android:textStyle="bold" />
+                        <!-- android:background="?attr/colorDark"-->
+
+                        <ImageView
+                            android:id="@+id/logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="@dimen/mini_margin"
+                            android:visibility="gone"
+                            android:background="?attr/colorLight"
+                            android:scaleType="fitCenter"
+                            android:src="@mipmap/ic_launcher"
+                            android:textColor="@color/white" />
+
+                        <include
+                            android:id="@+id/market_tatus"
+                            layout="@layout/status"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_margin="8dp"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+                <include
+
+                    layout="@layout/market_index_links"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@+id/fl_Chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/evenColor">
+                    <!--android:background="?attr/colorLight"-->
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chart1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/chart_height"
+                        android:layout_marginBottom="@dimen/chart_bottom_margin" />
+                    <!--android:background="?attr/colorLight"-->
+
+                    <ImageView
+                        android:id="@+id/ivExpand"
+                        android:layout_width="@dimen/expand_web"
+                        android:layout_height="@dimen/expand_web"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:src="@drawable/expand"
+                        android:tint="?attr/colorDark" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_SectorChanges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorMedium"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/mini_padding"
+                        android:text=""
+                        android:textColor="?attr/colorValues"
+                        android:textSize="@dimen/large" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:padding="@dimen/mini_padding"
+                            android:textColor="?attr/colorValues"
+                            android:textDirection="ltr"
+                            android:textSize="19sp" />
+
+                        <ImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_horizontal|center_vertical" />
+
+                    </LinearLayout>
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/value"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:padding="@dimen/mini_padding"-->
+                    <!--android:textSize="@dimen/large"-->
+                    <!--android:text="" />-->
+                    <!---->
+
+                    <TextView
+                        android:id="@+id/secondValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/mini_padding"
+                        android:text=""
+                        android:textSize="@dimen/large" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/valueList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvNewsHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/borderlayout"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/mini_padding"
+                    android:text="@string/news"
+                    android:textColor="?attr/colorValues"
+                    android:textSize="@dimen/normal"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorLight" />
+
+                <TextView
+                    android:id="@+id/tvNewsMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/borderlayout"
+                    android:gravity="center"
+                    android:padding="@dimen/mini_padding"
+                    android:text="@string/more"
+                    android:textColor="?attr/colorValues"
+                    android:textSize="@dimen/large"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlTickers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer">
+
+        <RelativeLayout
+            android:id="@+id/rlSectorTicker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/trades_ticker_height"
+            android:layout_marginBottom="1dp"
+            android:background="?attr/gray"
+            android:visibility="visible">
+
+            <!--<Spinner-->
+            <!--android:id="@+id/sectorSpinner"-->
+            <!--android:layout_width="@dimen/spinner_width"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:spinnerMode="dialog"-->
+            <!--android:popupBackground="@drawable/spinnershape"-->
+            <!--android:visibility="visible"-->
+            <!--android:background="@color/colorLight"-->
+            <!--android:layout_toLeftOf = "@+id/iv_sector" />-->
+            <!--android:background="@color/colorLight"-->
+
+            <Spinner
+                android:id="@+id/sectorSpinner"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="4dp"
+                android:layout_toLeftOf="@+id/iv_sector"
+                android:background="@color/colorLight"
+                android:spinnerMode="dialog"
+                android:visibility="visible" />
+            <!--android:layout_width="@dimen/spinner_width"-->
+
+            <com.ids.fixot.classes.ScrollViewExt
+                android:id="@+id/hsScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/sectorSpinner"
+                android:fillViewport="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvTicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:focusable="true"
+                    android:padding="@dimen/mini_padding"
+                    android:singleLine="true"
+                    android:textColor="?attr/colorValues"
+                    android:textDirection="anyRtl"
+                    android:textSize="@dimen/small"
+                    android:visibility="visible" />
+            </com.ids.fixot.classes.ScrollViewExt>
+
+            <TextView
+                android:id="@+id/tvNewTicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/sectorSpinner"
+                android:gravity="center"
+                android:padding="@dimen/mini_padding"
+                android:singleLine="true"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+
+            <ImageView
+                android:id="@+id/iv_sector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:background="?attr/colorMedium"
+                android:scaleType="centerInside"
+                android:src="@drawable/filters"
+                android:tint="?attr/colorValues" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/trades_ticker_height"
+            android:layout_below="@+id/rlSectorTicker"
+            android:layout_centerVertical="true"
+            android:background="?attr/gray">
+
+            <TextView
+                android:id="@+id/tvTradesTicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="horizontal"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/mini_padding"
+                android:singleLine="true"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

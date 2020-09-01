@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mini_margin"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="@dimen/menu_item_width"
+        android:layout_height="@dimen/menu_item_height"
+        android:layout_gravity="center"
+        android:background="?attr/colorDark"
+        android:gravity="center"
+        android:padding="@dimen/mini_padding"
+        android:src="@drawable/market_index"
+        android:tint="?attr/colorLight" />
+
+    <TextView
+        android:id="@+id/tvItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingTop="@dimen/mini_padding"
+        android:text="@string/market_index"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/normal" />
+
+</LinearLayout>

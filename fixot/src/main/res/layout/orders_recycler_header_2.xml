@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mowazi_dark_blue"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/llcompany"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:clickable="true"
+
+        >
+
+        <TextView
+            android:id="@+id/tvCompanyHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="start|center_vertical"
+            android:text="@string/mowazi_company"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small" />
+
+        <ImageView
+            android:id="@+id/ivcompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/updownempty"
+            android:tag="desc"
+            android:tint="@color/white" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvOrderAskHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.7"
+        android:gravity="start|center_horizontal"
+        android:maxLines="2"
+        android:padding="5dp"
+        android:text="@string/mowazi_orderType"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvOrderPrice"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.4"
+        android:gravity="right|center_vertical"
+        android:maxLines="2"
+        android:text="@string/price"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvOrderHeader"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.7"
+        android:gravity="end|center"
+        android:maxLines="2"
+        android:text="@string/mowazi_orderedQuantity"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+
+    <TextView
+        android:id="@+id/tvOfferHeader"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.9"
+        android:gravity="center|center_horizontal"
+        android:maxLines="2"
+        android:padding="3dp"
+        android:text="@string/mowazi_executedqty"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tvOrderBid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.9"
+        android:gravity="start|center_horizontal"
+        android:maxLines="2"
+
+        android:text="@string/mowazi_pendingquantity"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvCompanyOrderBook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:clickable="true"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/small"
+        android:visibility="gone" />
+
+
+</LinearLayout>

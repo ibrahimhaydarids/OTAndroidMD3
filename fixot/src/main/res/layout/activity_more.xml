@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/evenColor"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorDarkHeader"
+        android:elevation="4dp"
+        android:layoutDirection="ltr"
+        android:title="null">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="back"
+            android:padding="@dimen/padding"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding"
+            android:paddingEnd="@dimen/padding"
+            android:text="@string/logout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/logout_dimension"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding"
+            android:textColor="@color/colorDark"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/status"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal|center_vertical|end"
+            android:layout_margin="8dp"
+            android:padding="5dp" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/menu_footer"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/center_part"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/evenColor"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rlMowazi"
+                style="@style/more_item_layout"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/menu_mowazi"
+                    style="@style/more_image"
+                    android:src="@drawable/mowazi"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_mowazi_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_mowazi_bullet"
+                    android:layout_toEndOf="@+id/menu_mowazi"
+                    android:text="@string/menu_mowazi"></TextView>
+
+                <ImageView
+                    android:id="@+id/menu_mowazi_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlStocks"
+                style="@style/more_item_layout"
+                android:background="?attr/colorLight">
+
+                <ImageView
+                    android:id="@+id/menu_stock_image"
+                    style="@style/more_image"
+                    android:src="@drawable/stock"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_stock_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_stock_bullet"
+                    android:layout_toEndOf="@+id/menu_stock_image"
+                    android:text="@string/menu_stocks"></TextView>
+
+                <ImageView
+                    android:id="@+id/menu_stock_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlIslamicStocks"
+                style="@style/more_item_layout">
+
+                <ImageView
+                    android:id="@+id/menu_IslamicStock_image"
+                    style="@style/more_image"
+                    android:src="@drawable/muslim"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_IslamicStock_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_IslamicStock_bullet"
+                    android:layout_toEndOf="@+id/menu_IslamicStock_image"
+                    android:text="@string/menu_islamic_stocks"></TextView>
+
+                <ImageView
+                    android:id="@+id/menu_IslamicStock_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlOffMarketQuotes"
+                style="@style/more_item_layout"
+                android:background="?attr/colorLight">
+
+                <ImageView
+                    android:id="@+id/menu_OffMarketQuotes_image"
+                    style="@style/more_image"
+                    android:src="@drawable/trades"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_OffMarketQuotes_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_OffMarketQuotes_bullet"
+                    android:layout_toEndOf="@+id/menu_OffMarketQuotes_image"
+                    android:text="@string/menu_OffMarketQuotes"></TextView>
+
+                <ImageView
+                    android:id="@+id/menu_OffMarketQuotes_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSectors"
+                style="@style/more_item_layout">
+
+                <ImageView
+                    android:id="@+id/menu_sector_image"
+                    style="@style/more_image"
+                    android:src="@drawable/sector"></ImageView>
+
+                <ImageView
+                    android:id="@+id/menu_sector_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_sector_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_sector_bullet"
+                    android:layout_toEndOf="@+id/menu_sector_image"
+                    android:text="@string/menu_sectors"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTops"
+                style="@style/more_item_layout"
+                android:background="?attr/colorLight">
+
+                <ImageView
+                    android:id="@+id/menu_top_gainer_image"
+                    style="@style/more_image"
+                    android:src="@drawable/top_value"></ImageView>
+
+                <ImageView
+                    android:id="@+id/menu_top_gainer_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_top_gainer_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_top_gainer_bullet"
+                    android:layout_toEndOf="@+id/menu_top_gainer_image"
+                    android:text="@string/summary"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNews"
+                style="@style/more_item_layout">
+
+                <ImageView
+                    android:id="@+id/menu_news_image"
+                    style="@style/more_image"
+                    android:src="@drawable/news"></ImageView>
+
+                <ImageView
+                    android:id="@+id/menu_news_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_news_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_news_bullet"
+                    android:layout_toEndOf="@+id/menu_news_image"
+                    android:text="@string/news"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLinks"
+                style="@style/more_item_layout"
+                android:background="?attr/colorLight">
+
+                <ImageView
+                    android:id="@+id/menu_links_image"
+                    style="@style/more_image"
+                    android:src="@drawable/unlink"></ImageView>
+
+                <ImageView
+                    android:id="@+id/menu_links_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_links_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_links_bullet"
+                    android:layout_toEndOf="@+id/menu_links_image"
+                    android:text="@string/links"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlChangePassword"
+                style="@style/more_item_layout"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/menu_change_password_image"
+                    style="@style/more_image"
+                    android:src="@drawable/menu_change_pass"></ImageView>
+
+                <ImageView
+                    android:id="@+id/menu_change_password_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_change_password_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_change_password_bullet"
+                    android:layout_toEndOf="@+id/menu_change_password_image"
+                    android:text="@string/change_password"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSettings"
+                style="@style/more_item_layout"
+                android:background="?attr/colorLight"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/menu_settings_image"
+                    style="@style/more_image"
+                    android:src="@drawable/settings"></ImageView>
+
+                <ImageView
+                    android:id="@+id/menu_settings_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_settings_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_settings_bullet"
+                    android:layout_toEndOf="@+id/menu_settings_image"
+                    android:text="@string/settings"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRegister"
+                style="@style/more_item_layout"
+                android:background="?attr/colorLight"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/menu_register_image"
+                    style="@style/more_image"
+                    android:src="@drawable/menu_register"></ImageView>
+
+                <ImageView
+                    android:id="@+id/menu_register_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_register_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_register_bullet"
+                    android:layout_toEndOf="@+id/menu_register_image"
+                    android:text="@string/register"></TextView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlFavorites"
+                style="@style/more_item_layout"
+                android:background="?attr/colorLight"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/menu_favorite_image"
+                    style="@style/more_image"
+                    android:src="@drawable/favorite"></ImageView>
+
+                <ImageView
+                    android:id="@+id/menu_favorite_bullet"
+                    style="@style/more_bullet"
+                    android:visibility="gone"></ImageView>
+
+                <TextView
+                    android:id="@+id/menu_favorite_title"
+                    style="@style/more_text"
+                    android:layout_toStartOf="@+id/menu_favorite_bullet"
+                    android:layout_toEndOf="@+id/menu_favorite_image"
+                    android:text="@string/favorite"></TextView>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/menu_footer"
+        layout="@layout/menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" />
+</RelativeLayout>

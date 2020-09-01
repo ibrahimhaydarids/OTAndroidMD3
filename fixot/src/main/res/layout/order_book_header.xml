@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorMedium"
+    android:minHeight="@dimen/header_height"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/tvAskNumberHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/bid_number"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvTimeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/bid_quantity"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvPriceHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/price"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvBidQtyHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/ask_quantity"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvBidNumberHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/ask_number"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+</LinearLayout>

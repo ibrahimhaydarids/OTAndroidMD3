@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_start_end"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:textDirection="ltr">
+
+    <ImageView
+        android:id="@+id/ivFinger"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/mini_margin"
+        android:layout_marginTop="@dimen/margin_start_end"
+        android:layout_marginEnd="@dimen/mini_margin"
+        android:background="@drawable/circle_neutral"
+        android:padding="@dimen/padding"
+        android:scaleType="centerInside"
+        android:src="@drawable/fingerprint" />
+
+    <TextView
+        android:id="@+id/tvFinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/ivFinger"
+        android:text="@string/fingerprint_neutral" />
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLight"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorDarkHeader"
+        android:elevation="4dp"
+        android:layoutDirection="ltr"
+        android:title="null">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="back"
+            android:padding="@dimen/padding"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding"
+            android:textColor="@color/colorDark"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/status"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal|center_vertical|end"
+            android:layout_margin="8dp"
+            android:padding="5dp" />
+    </android.support.v7.widget.Toolbar>
+
+    <include
+        android:id="@+id/sectors_header"
+        layout="@layout/sector_index_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/trades_page_items_height"
+        android:layout_below="@+id/my_toolbar" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSectorIndex"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/sectors_header"
+        android:background="?attr/colorLight" />
+
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

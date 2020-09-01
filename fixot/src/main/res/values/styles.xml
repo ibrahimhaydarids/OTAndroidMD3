@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <attr name="colorValues" format="reference|color" />
+    <attr name="colorLight" format="reference|color" />
+    <attr name="colorDark" format="reference|color" />
+    <attr name="colorDarkHeader" format="reference|color" />
+    <attr name="colorPrimaryTopDark" format="reference|color" />
+    <attr name="oddColor" format="reference|color" />
+    <attr name="evenColor" format="reference|color" />
+    <attr name="gray" format="reference|color" />
+    <attr name="grayTransparent" format="reference|color" />
+    <attr name="colorMedium" format="reference|color" />
+    <attr name="colorMediumTransparent" format="reference|color" />
+    <attr name="tradegrey" format="reference|color" />
+    <attr name="grey" format="reference|color" />
+
+    <declare-styleable name="AppTheme.NoActionBar">
+        <attr name="colorValues" />
+        <attr name="colorLight" />
+        <attr name="colorDark" />
+        <attr name="colorDarkHeader" />
+        <attr name="colorPrimaryTopDark" />
+        <attr name="oddColor" />
+        <attr name="evenColor" />
+        <attr name="gray" />
+        <attr name="grayTransparent" />
+        <attr name="colorMedium" />
+        <attr name="colorMediumTransparent" />
+        <attr name="tradegrey" />
+        <attr name="grey" />
+    </declare-styleable>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="colorValues">@color/colorValues</item>
+        <item name="colorLight">@color/colorLight</item>
+        <item name="colorDark">@color/colorDark</item>
+        <item name="colorDarkHeader">@color/colorDark</item>
+        <item name="colorPrimaryTopDark">@color/colorPrimaryDark</item>
+        <item name="oddColor">@color/colorMedium</item>
+        <item name="evenColor">@color/white</item>
+        <item name="gray">@color/gray</item>
+        <item name="grayTransparent">@color/grayTransparent</item>
+        <item name="colorMedium">@color/colorMedium</item>
+        <item name="colorMediumTransparent">@color/colorMediumTransparent</item>
+        <item name="tradegrey">@color/tradegrey</item>
+        <item name="grey">@color/grey</item>
+    </style>
+
+    <declare-styleable name="AppTheme.NoActionBar_Dark">
+        <attr name="colorValues" />
+        <attr name="colorLight" />
+        <attr name="colorDark" />
+        <attr name="colorDarkHeader" />
+        <attr name="colorPrimaryTopDark" />
+        <attr name="oddColor" />
+        <attr name="evenColor" />
+        <attr name="gray" />
+        <attr name="grayTransparent" />
+        <attr name="colorMedium" />
+        <attr name="colorMediumTransparent" />
+        <attr name="tradegrey" />
+        <attr name="grey" />
+    </declare-styleable>
+
+    <style name="AppTheme.NoActionBar_Dark" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textAllCaps">false</item>
+
+        <item name="colorValues">@color/colorValuesInv</item>
+        <item name="colorLight">@color/colorLightTheme</item>
+        <item name="colorDark">@color/colorDarkInv</item>
+        <item name="colorDarkHeader">@color/colorDarkTheme</item>
+        <item name="colorPrimaryTopDark">@color/colorPrimaryDarkTheme</item>
+        <item name="oddColor">@color/colorValues</item>
+        <item name="evenColor">@color/colorDarkTheme</item>
+        <item name="gray">@color/grayInv</item>
+        <item name="grayTransparent">@color/grayTransparentInv</item>
+        <item name="colorMedium">@color/colorMediumInv</item>
+        <item name="colorMediumTransparent">@color/colorMediumTransparentInv</item>
+        <item name="tradegrey">@color/colorValues</item>
+        <item name="grey">@color/greyInv</item>
+    </style>
+
+    <!--<style name="AppTheme.NoActionBar">-->
+    <!--<item name="windowActionBar">false</item>-->
+    <!--<item name="windowNoTitle">true</item>-->
+    <!--<item name="android:textAllCaps">false</item>-->
+    <!--</style>-->
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="more_item_layout" parent="title_text_styling">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:padding">@dimen/mini_padding</item>
+        <item name="android:onClick">goTo</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance">
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="MowaziTabLayoutTextAppearance">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.Design.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="more_image">
+        <item name="android:layout_height">@dimen/more_image_height</item>
+        <item name="android:layout_width">@dimen/more_image_width</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:padding">@dimen/mini_padding</item>
+        <item name="android:tint">?attr/colorDark</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="more_bullet">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:src">@android:drawable/arrow_down_float</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="more_text" parent="title_text_styling">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">@dimen/header</item>
+        <item name="android:textColor">?attr/colorValues</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">@dimen/mini_padding</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="MyTheme" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/normal</item>
+    </style>
+
+    <style name="MyThemeDark" parent="android:Theme.Holo.Dialog"></style>
+
+    <style name="trades_stock_info_layouts" parent="title_text_styling">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">0.25dp</item>
+        <item name="android:layout_marginEnd">0.25dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="@android:style/Theme.Panel">
+        <item name="android:background">@color/colorLight</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="menu_page_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="title_text_styling">
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="menu_page_button_layout" parent="title_text_styling">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="menu_page_button_text" parent="title_text_styling">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorValues</item>
+        <item name="android:textSize">@dimen/normal</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="menu_page_second_button_text" parent="title_text_styling">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorValues</item>
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+
+    <style name="menuButtons" parent="title_text_styling">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorValues</item>
+        <item name="android:textSize">@dimen/normal</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@android:color/transparent</item>
+        <item name="android:bottomDark">@android:color/transparent</item>
+        <item name="android:bottomMedium">@android:color/transparent</item>
+        <item name="android:centerBright">@android:color/transparent</item>
+        <item name="android:centerDark">@android:color/transparent</item>
+        <item name="android:centerMedium">@android:color/transparent</item>
+        <item name="android:fullBright">@android:color/transparent</item>
+        <item name="android:fullDark">@android:color/transparent</item>
+        <item name="android:topBright">@android:color/transparent</item>
+        <item name="android:topDark">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoTitleBar">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="titleStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="titleLandStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="textStyle">
+        <item name="android:textColor">@color/colorValues</item>
+        <item name="android:textSize">@dimen/normal</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textAppearance">@android:color/black</item>
+        <item name="android:windowTitleStyle">@style/Dialog</item>
+    </style>
+
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/MyOwnDialogTitle</item>
+    </style>
+
+    <style name="MyOwnDialogTitle">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="InstrumentsItemsLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TopsItemsLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="textListHeader">
+        <item name="android:textColor">?attr/colorValues</item>
+        <item name="android:textSize">@dimen/normal</item>
+    </style>
+
+    <style name="textListItem">
+        <item name="android:textColor">@color/colorValues</item>
+        <item name="android:textSize">@dimen/normal</item>
+    </style>
+
+
+
+
+</resources>

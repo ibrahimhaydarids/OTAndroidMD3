@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llAssemblyItem"
+    android:background="@color/darkblue"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.6"
+        android:gravity="start|center_vertical"
+        android:layout_gravity="center_vertical"
+        android:textStyle="bold"
+        android:paddingStart="5dp"
+        android:id="@+id/tvCompanyHeader"
+        android:textSize="10sp"
+        android:text="@string/company" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="1dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="start|center_vertical"
+        android:id="@+id/tvTypeHeader"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:text="@string/communityType" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="1dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:gravity="start|center_vertical"
+        android:id="@+id/tvDateHeader"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:text="@string/date" />
+
+</LinearLayout>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorMedium">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/footer"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/my_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorDarkHeader"
+                    android:elevation="4dp"
+                    android:layoutDirection="ltr"
+                    android:title="null">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="back"
+                        android:padding="@dimen/padding"
+                        android:src="@drawable/back" />
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/padding"
+                        android:textColor="@color/colorDark"
+                        android:visibility="gone" />
+
+                    <include
+                        layout="@layout/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal|center_vertical|end"
+                        android:layout_margin="8dp"
+                        android:padding="5dp" />
+                </android.support.v7.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:id="@+id/linearInclude"
+                        >
+                    <include
+                        android:id="@+id/llTab"
+                        layout="@layout/instruments_filter_md_three_layout"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="@dimen/button_height" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginStart="@dimen/margin_start_end"
+                        android:layout_marginEnd="@dimen/margin_start_end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/trades_page_items_height"
+                            android:layout_height="@dimen/trades_page_items_height"
+                            android:padding="@dimen/mini_padding"
+                            android:src="@drawable/tops_up"
+                            android:tint="@color/green_color" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:padding="@dimen/mini_padding"
+                            android:text="@string/top_gainer"
+                            android:textColor="@color/green_color"
+                            android:textSize="@dimen/normal" />
+                    </LinearLayout>
+
+
+                    <include
+                        android:id="@+id/llGainersHeader"
+                        layout="@layout/tops_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/trades_page_items_height" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="4dp"
+                        android:background="@drawable/shadow"></View>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvTopGainers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="3dp"
+                        android:background="@drawable/shadow_inv"></View>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginStart="@dimen/margin_start_end"
+                        android:layout_marginEnd="@dimen/margin_start_end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/trades_page_items_height"
+                            android:layout_height="@dimen/trades_page_items_height"
+                            android:padding="@dimen/mini_padding"
+                            android:src="@drawable/tops_down"
+                            android:tint="@color/red_color" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:padding="@dimen/mini_padding"
+                            android:text="@string/top_looser"
+                            android:textColor="@color/red_color"
+                            android:textSize="@dimen/normal" />
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/llLosersHeader"
+                        layout="@layout/tops_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/trades_page_items_height" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="4dp"
+                        android:background="@drawable/shadow"></View>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvTopLosers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="3dp"
+                        android:background="@drawable/shadow_inv"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginStart="@dimen/margin_start_end"
+                        android:layout_marginEnd="@dimen/margin_start_end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/trades_page_items_height"
+                            android:layout_height="@dimen/trades_page_items_height"
+                            android:padding="@dimen/mini_padding"
+                            android:src="@drawable/tops_volume"
+                            android:tint="?attr/colorValues" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:padding="@dimen/mini_padding"
+                            android:text="@string/top_traded"
+                            android:textColor="?attr/colorValues"
+                            android:textSize="@dimen/normal" />
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/llTradedHeader"
+                        layout="@layout/tops_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/trades_page_items_height" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="4dp"
+                        android:background="@drawable/shadow"></View>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvTopTraded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="3dp"
+                        android:background="@drawable/shadow_inv"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginStart="@dimen/margin_start_end"
+                        android:layout_marginEnd="@dimen/margin_start_end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/trades_page_items_height"
+                            android:layout_height="@dimen/trades_page_items_height"
+                            android:padding="@dimen/mini_padding"
+                            android:src="@drawable/tops_trades"
+                            android:tint="?attr/colorValues" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:padding="@dimen/mini_padding"
+                            android:text="@string/top_trades"
+                            android:textColor="?attr/colorValues"
+                            android:textSize="@dimen/normal" />
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/llTradesHeader"
+                        layout="@layout/tops_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/trades_page_items_height" />
+
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="4dp"
+                        android:background="@drawable/shadow"></View>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvTopTrades"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="3dp"
+                        android:background="@drawable/shadow_inv"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginStart="@dimen/margin_start_end"
+                        android:layout_marginEnd="@dimen/margin_start_end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/trades_page_items_height"
+                            android:layout_height="@dimen/trades_page_items_height"
+                            android:padding="@dimen/mini_padding"
+                            android:src="@drawable/tops_value"
+                            android:tint="?attr/colorValues" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:padding="@dimen/mini_padding"
+                            android:text="@string/top_value"
+                            android:textColor="?attr/colorValues"
+                            android:textSize="@dimen/normal" />
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/llVolumeHeader"
+                        layout="@layout/tops_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/trades_page_items_height" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="4dp"
+                        android:background="@drawable/shadow"></View>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvTopVolume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/mini_margin" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

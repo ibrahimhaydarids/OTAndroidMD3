@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorLight"
+    android:baselineAligned="true"
+    android:elevation="12dp"
+    android:orientation="horizontal"
+    card_view:cardElevation="@dimen/cardview_default_elevation">
+
+    <LinearLayout
+        android:id="@+id/toggleGroup"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="true"
+        android:elevation="12dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llMarketIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="loadFooter"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/menu_marketindex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/market_footer"
+                android:tint="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvmenu_marketindex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/menu_marketindex"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPortfolio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="loadFooter"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/menu_portfolio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/portfolio_footer"
+                android:tint="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvmenu_portfolio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/menu_portfolio"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="loadFooter"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/menu_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/orders_footer"
+                android:tint="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvmenu_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/menu_orders"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFavorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="loadFooter"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/menu_stocks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stock_footer"
+                android:tint="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvmenu_stocks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/menu_favorites"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMowazi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="loadFooter"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/menu_mowazi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/mowazi_off"
+                android:tint="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvmenu_mowazi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/menu_mowazi"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="loadFooter"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/menu_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/more_footer"
+                android:tint="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvmenu_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/menu_more"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

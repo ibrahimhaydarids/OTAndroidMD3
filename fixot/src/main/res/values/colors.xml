@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#3F51B5</color>
+    <color name="colorAccent">#6BA2B8</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#0087C4</color>
+    <color name="app_color">#000000</color>
+    <color name="lightgrey">#D3D3D3</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="tradegrey">#C5C5C5</color>
+    <color name="darkgray">#A9A9A9</color>
+    <color name="lightlightgrey">#F2F2F2</color>
+    <color name="buttonlightgrey">#E6E6E6</color>
+    <color name="closed_market">#FF0000</color>
+    <color name="opened_market">#00B400</color>
+    <color name="other_market">#FF8000</color>
+    <color name="orange">#F29C44</color>
+    <color name="yellow">#ffff00</color>
+    <color name="lightblue2">#E5F3F9</color>
+    <color name="blueButton">#1B75B9</color>
+
+    <color name="odd_red_color">#66ef4e50</color>
+    <color name="even_red_color">#33ef4e50</color>
+    <color name="red_color">#A20D0D</color>
+    <color name="light_red_color">#66A20D0D</color>
+
+    <color name="light_white">#B3FFFFFF</color>
+    <color name="odd_green_color">#6600A100</color>
+    <color name="even_green_color">#3300A100</color>
+    <color name="green_color">#00A100</color>
+    <color name="light_green_color">#6600A100</color>
+
+    <color name="timesales_light_row">#ef8fb6</color>
+    <color name="timesales_dark_row">#edc0d6</color>
+
+    <color name="mowazi_dark_blue">#264E71</color>
+    <color name="mowazi_white_blue">#DEE8F0</color>
+    <color name="mowazi_light_blue">#E5F3F9</color>
+    <color name="mowazi_blueButton">#1B75B9</color>
+    <color name="mowazi_colorPrimaryDark">#1E4489</color>
+    <color name="mowazi_buttonGray">#B9BBBD</color>
+    <color name="mowazi_buttonYellow">#EC4036</color>
+    <color name="lightblue">#E5F3F9</color>
+
+    <color name="last_ask_value_color">#0909FF</color>
+    <color name="price_value_color">#FF8000</color>
+    <color name="bid_quanity_value_color">#FF0000</color>
+
+    <color name="trade_sell_color">#0aef4e50</color>
+    <color name="trade_buy_color">#0a4bba73</color>
+    <color name="white_trade_color">#80FFFFFF</color>
+
+    <color name="gray">#d9d9d9</color>
+    <color name="grayTransparent">#A6d9d9d9</color>
+    <color name="grayInv">#313131</color>
+    <color name="grayTransparentInv">#A6313131</color>
+    <color name="grey">#dedcdc</color>
+    <color name="greyInv">#232323</color>
+
+    <color name="colorValues">#4b4b4b</color>
+    <color name="colorValuesInv">#cbcbcb</color>
+
+    <color name="colorLight">#F2F2F2</color>
+    <color name="colorLightInv">#0b0b0b</color>
+
+    <color name="colorMedium">#E6E6E6</color>
+    <color name="colorMediumInv">#171717</color>
+    <color name="colorMediumTransparent">#A6E6E6E6</color>
+    <color name="colorMediumTransparentInv">#A6171717</color>
+
+    <color name="colorDark">#293064</color>
+    <color name="colorDarkInv">#0086cd</color>
+
+    <color name="colorLightTheme">#141414</color>
+    <color name="colorDarkTheme">#000000</color>
+    <color name="colorPrimaryDarkTheme">#000000</color>
+    <!--<color name="colorMediumTransparent">#000000</color>-->
+
+
+    <color name="darkblue">#264E71</color>
+    <color name="buttonGray">#B9BBBD</color>
+
+
+</resources>

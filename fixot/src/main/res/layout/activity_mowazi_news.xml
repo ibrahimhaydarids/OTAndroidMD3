@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mowazi_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/menu_footer"
+        layout="@layout/menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/main_bar"
+        layout="@layout/mowazi_mainbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_bar"
+        android:layout_margin="10dp"
+        android:background="@color/mowazi_light_blue">
+
+        <TextView
+            android:id="@+id/tvNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/mowazi_light_blue"
+            android:padding="5dp"
+            android:text="@string/news"
+            android:textColor="@color/mowazi_colorPrimaryDark"
+            android:textSize="@dimen/small"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tlTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/blue"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:tabBackground="@drawable/mowazi_tab_color_selector"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabTextColor="@color/white" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/menu_footer"
+        android:layout_below="@+id/tlTabs"
+        android:layout_marginBottom="5dp"
+        android:clipToPadding="true"></android.support.v4.view.ViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/mowazi_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_bar"
+        layout="@layout/mowazi_mainbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <ScrollView
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_bar"
+        android:animateLayoutChanges="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/pbOrders"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/swipeContainer"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/mowazi_light_blue"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPlaceOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/mowazi_light_blue"
+                        android:padding="2dp"
+                        android:text="@string/place_order"
+                        android:textColor="@color/mowazi_dark_blue"
+                        android:textSize="@dimen/small"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/mowazi_light_blue">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/spinnerLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/borderspinner">
+
+                            <TextView
+                                android:id="@+id/companyName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/mowazi_light_blue"
+                                android:gravity="center_horizontal"
+                                android:padding="2dp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/small"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerCompanies"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="2dp"
+                                android:background="@android:color/transparent"
+                                android:dropDownWidth="230dp"
+                                android:hint="@string/mowazi_companies"
+                                android:maxLines="1"
+                                android:padding="4dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/small" />
+
+
+                            <ImageView
+                                android:id="@+id/arrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_margin="4dp"
+                                android:src="@drawable/arrowdown" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1">
+
+                                <ImageButton
+                                    android:id="@+id/btSell"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/rounded_button"
+                                    android:padding="5dp"
+                                    android:src="@drawable/background"
+                                    android:text="@string/sell"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/small" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@android:color/transparent"
+                                    android:text="@string/sell"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/small" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1">
+
+                                <ImageButton
+                                    android:id="@+id/btBuy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/rounded_button"
+                                    android:padding="5dp"
+                                    android:src="@drawable/background"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/small" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@android:color/transparent"
+                                    android:text="@string/buy"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/small" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llOrderOptions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/mowazi_light_blue"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/price"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/small" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:text="@string/mowazi_dealPrice"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/small" />
+
+                                <EditText
+                                    android:id="@+id/etPriceFels"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_edittext"
+                                    android:inputType="numberDecimal"
+                                    android:padding="2dp"
+                                    android:textSize="@dimen/small">
+
+                                    <requestFocus />
+                                </EditText>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:text="@string/mowazi_dinar"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/small" />
+
+                                <EditText
+                                    android:id="@+id/etPriceDinar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/disabled_edit_text"
+                                    android:enabled="false"
+                                    android:focusable="false"
+                                    android:inputType="number"
+                                    android:padding="2dp"
+                                    android:textColor="@drawable/edit_text_selector"
+                                    android:textSize="@dimen/small" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="@string/quantity"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/small" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_horizontal"
+                                    android:weightSum="10">
+
+                                    <ImageButton
+                                        android:id="@+id/btIncrement"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:background="@android:color/transparent"
+                                        android:padding="5dp"
+                                        android:src="@drawable/plus" />
+
+                                    <EditText
+                                        android:id="@+id/etQuantity"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_weight="5"
+                                        android:background="@drawable/rounded_edittext"
+                                        android:gravity="center"
+                                        android:inputType="number"
+                                        android:maxLength="8"
+                                        android:maxLines="1"
+                                        android:padding="2dp"
+                                        android:text="0"
+                                        android:textSize="@dimen/small" />
+
+                                    <ImageButton
+                                        android:id="@+id/btDecrement"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:background="@android:color/transparent"
+                                        android:padding="5dp"
+                                        android:src="@drawable/minus" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:text="@string/mowazi_total"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/small" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+
+                                        <EditText
+                                            android:id="@+id/etDinarTotal"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/disabled_edit_text"
+                                            android:enabled="false"
+                                            android:focusable="false"
+                                            android:inputType="number"
+                                            android:maxLines="1"
+                                            android:padding="2dp"
+                                            android:textColor="@drawable/edit_text_selector"
+                                            android:textSize="@dimen/small" />
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="4dp"
+                                            android:text="@string/mowazi_dinar"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/small" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:text="@string/mowazi_commission"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/small" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/etDinarCommission"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/disabled_edit_text"
+                                            android:enabled="false"
+                                            android:focusable="false"
+                                            android:inputType="number"
+                                            android:maxLines="1"
+                                            android:padding="2dp"
+                                            android:textColor="@drawable/edit_text_selector"
+                                            android:textSize="@dimen/small" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="4dp"
+                                            android:text="@string/mowazi_dinar"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/small" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:text="@string/mowazi_totalandcommission"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/small" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+
+                                        <EditText
+                                            android:id="@+id/etDinarTotalPlusCommssion"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/disabled_edit_text"
+                                            android:enabled="false"
+                                            android:focusable="false"
+                                            android:inputType="number"
+                                            android:maxLines="1"
+                                            android:padding="2dp"
+                                            android:textColor="@drawable/edit_text_selector"
+                                            android:textSize="@dimen/small" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="4dp"
+                                            android:text="@string/mowazi_dinar"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="@dimen/small" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="2dp"
+                                        android:gravity="start"
+                                        android:text="@string/mowazi_valid_until"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/small" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <RadioGroup
+                                            android:id="@+id/rgChoices"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <RadioButton
+                                                android:id="@+id/rbCancel"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/mowazi_cancellation"
+                                                android:textSize="@dimen/small" />
+
+                                            <RadioButton
+                                                android:id="@+id/rbDate"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginStart="20dp"
+                                                android:checked="true"
+                                                android:gravity="center"
+                                                android:text="@string/date"
+                                                android:textSize="@dimen/small" />
+                                        </RadioGroup>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_toEndOf="@+id/rgChoices"
+                                            android:orientation="horizontal"
+                                            android:weightSum="3">
+
+                                            <EditText
+                                                android:id="@+id/etDate"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginStart="4dp"
+                                                android:layout_marginEnd="4dp"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/rounded_edittext"
+                                                android:inputType="date"
+                                                android:maxLines="1"
+                                                android:padding="2dp"
+                                                android:textSize="@dimen/small" />
+
+                                            <ImageView
+                                                android:id="@+id/ivDate"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginStart="2dp"
+                                                android:padding="4dp"
+                                                android:src="@drawable/calander" />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:text="@string/mowazi_orderAlert"
+                                        android:textColor="@color/red_color"
+                                        android:textSize="@dimen/small" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/rlConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp">
+
+                    <ImageButton
+                        android:id="@+id/btConfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/rounded_dark_blue_button"
+                        android:padding="5dp"
+                        android:src="@drawable/confirmation"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/confirm"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llActions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="4dp"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/btEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:src="@drawable/edit"
+                        android:textColor="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/btDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:src="@drawable/delete"
+                        android:textColor="@color/white" />
+
+                    <ImageButton
+                        android:id="@+id/btRefresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:src="@drawable/refresh"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

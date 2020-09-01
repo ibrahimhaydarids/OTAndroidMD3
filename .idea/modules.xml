@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OT_ss_backup.iml" filepath="$PROJECT_DIR$/OT_ss_backup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fixot/fixot.iml" filepath="$PROJECT_DIR$/fixot/fixot.iml" />
+    </modules>
+  </component>
+</project>

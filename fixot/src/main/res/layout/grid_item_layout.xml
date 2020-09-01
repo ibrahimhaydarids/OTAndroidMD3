@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llGridItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/log_out_padding">
+
+    <ImageView
+        android:id="@+id/ivGrid"
+        android:layout_width="@dimen/settings_row_height"
+        android:layout_height="@dimen/settings_row_height"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvTextGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="@color/mowazi_dark_blue"
+        android:textSize="@dimen/normal" />
+
+</LinearLayout>

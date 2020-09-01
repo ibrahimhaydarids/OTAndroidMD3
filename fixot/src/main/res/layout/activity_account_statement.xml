@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorDarkHeader"
+            android:elevation="4dp"
+            android:layoutDirection="ltr"
+            android:title="null">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="back"
+                android:padding="@dimen/padding"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding"
+                android:textColor="?attr/colorDark"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/status"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal|center_vertical|end"
+                android:layout_margin="8dp"
+                android:padding="5dp" />
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rlUserHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorMedium"
+            android:minHeight="@dimen/header_height"
+            android:orientation="horizontal"
+            android:padding="@dimen/mini_padding">
+
+            <Spinner
+                android:id="@+id/spSubAccounts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_top_bottom"
+                android:layout_marginEnd="@dimen/margin_top_bottom"
+                android:background="@android:color/transparent" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/mini_margin"
+                android:rotation="270"
+                android:src="@drawable/back"
+                android:tint="?attr/colorPrimaryDark" />
+
+        </RelativeLayout>
+
+
+        <RadioGroup
+            android:id="@+id/rgAccounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal"
+            android:padding="@dimen/small_margin"
+            android:weightSum="2">
+
+
+            <RadioButton
+                android:id="@+id/rbReport"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:layout_marginEnd="@dimen/margin_top_bottom"
+                android:buttonTint="@color/colorDark"
+                android:checked="true"
+                android:text="@string/account_statement_title"
+                android:textColor="@color/colorDark"
+                android:textSize="@dimen/normal" />
+
+            <RadioButton
+                android:id="@+id/rbGroupedReport"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_top_bottom"
+                android:buttonTint="@color/colorDark"
+                android:text="@string/account_statement_grp"
+                android:textColor="@color/colorDark"
+                android:textSize="@dimen/normal" />
+
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/llDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:text="@string/to_date"
+                android:textColor="@color/colorValues"
+                android:textSize="@dimen/normal"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvToDate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/border_edit_text"
+                android:gravity="center"
+                android:padding="@dimen/mini_padding"
+                android:text="@string/select_date"
+                android:textColor="@color/colorValues" />
+
+            <Button
+                android:id="@+id/btAccountStatement"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/mini_margin"
+                android:layout_weight="1"
+                android:background="@color/colorDark"
+                android:elevation="@dimen/button_elevation"
+                android:padding="@dimen/mini_padding"
+                android:text="@string/generate"
+                android:textColor="@color/colorLight"
+                android:textSize="@dimen/small" />
+
+        </LinearLayout>
+
+
+        <WebView
+            android:id="@+id/wvData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorLight" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

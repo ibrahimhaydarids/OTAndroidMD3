@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorMedium"
+    android:minHeight="@dimen/header_height"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+
+    <TextView
+        android:id="@+id/tvTimeHeaderS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/time"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+
+    <TextView
+        android:id="@+id/tvQtyHeaderS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/ask_quantity"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvPriceHeaderS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/price"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+</LinearLayout>

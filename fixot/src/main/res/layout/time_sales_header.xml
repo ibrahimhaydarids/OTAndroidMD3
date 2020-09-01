@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorMedium"
+    android:minHeight="@dimen/header_height"
+    android:orientation="horizontal"
+    android:padding="@dimen/mini_padding">
+
+    <TextView
+        android:id="@+id/tvStockHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="0.95"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/stock_name_title"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+
+    <TextView
+        android:id="@+id/tvTypeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="0.55"
+        android:gravity="center"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/type"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvPriceHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/price"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvQuantityHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/quantity"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvChangeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/change_title"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+
+    <TextView
+        android:id="@+id/tvTimeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="0.8"
+        android:gravity="end"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/time"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+</LinearLayout>

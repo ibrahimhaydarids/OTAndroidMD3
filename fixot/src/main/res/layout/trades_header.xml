@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorMedium"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:weightSum="7">
+
+    <TextView
+        android:id="@+id/tvStockHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.9"
+        android:padding="4dp"
+        android:text="@string/stock"
+        android:textColor="@color/colorValues"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvPriceHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:text="@string/price"
+        android:textColor="@color/colorValues"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvQuantityHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.1"
+        android:padding="4dp"
+        android:text="@string/quantity"
+        android:textColor="@color/colorValues"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvChangeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:text="@string/change"
+        android:textColor="@color/colorValues"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:textColor="@color/colorValues"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvTimeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.1"
+        android:padding="4dp"
+        android:text="@string/time_sales"
+        android:textColor="@color/colorValues"
+        android:textSize="12sp" />
+</LinearLayout>

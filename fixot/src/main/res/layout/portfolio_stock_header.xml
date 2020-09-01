@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/header_height"
+    android:background="?attr/colorMedium"
+    android:maxHeight="@dimen/header_height"
+    android:minHeight="@dimen/header_height"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/trades_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/small_margin"
+        android:background="@drawable/tradebuttondrawable"
+        android:onClick="loadTrades"
+        android:text="T"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/symbol_title"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:padding="0sp"
+                android:text="@string/sector_name"
+                android:textColor="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/quantity_cost_title"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Shares"
+                android:textColor="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/bid_ask_title"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1.1"
+                android:gravity="center"
+                android:text="@string/bid_ask_title"
+                android:textColor="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/unrealized_title"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/unrealized_title"
+                android:textColor="?attr/colorValues" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:text=""
+                android:textColor="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/cost_titles"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/Value"
+                android:textColor="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/tvLast"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.1"
+                android:gravity="center"
+                android:text="@string/last_price_title"
+                android:textColor="?attr/colorValues" />
+
+            <TextView
+                android:id="@+id/unrealized_title_prcnt"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="%"
+                android:textColor="?attr/colorValues" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

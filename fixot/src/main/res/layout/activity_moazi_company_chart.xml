@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bgwhite"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/main"
+                layout="@layout/moazisecondmainbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" />
+
+            <include
+                android:id="@+id/bottom"
+                layout="@layout/moazibottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+            <RelativeLayout
+                android:id="@+id/chartrl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom"
+                android:layout_below="@+id/main"
+                android:layout_margin="10dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightblue2">
+
+
+                    <TextView
+                        android:id="@+id/tvDeals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/lightblue2"
+                        android:padding="2dp"
+                        android:text="@string/chart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:id="@+id/filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:padding="6dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/filter" />
+
+                </RelativeLayout>
+
+                <!--<com.ids.almouwazi.classes.TouchImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:id="@+id/ivChart"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:src="@drawable/logo"-->
+                <!--android:visibility="gone"-->
+                <!--android:alpha="0.5"-->
+                <!--android:layout_below="@+id/top"-->
+                <!--android:layout_height="match_parent" />-->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/linechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/top"
+                    android:scaleType="center" />
+
+                <ProgressBar
+                    android:id="@+id/pbLoading"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+    <!--        <ImageButton
+                android:id="@+id/imgbtn"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/touch"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content" />
+-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:gravity="center|bottom"
+            android:visibility="gone">
+
+            <!--<ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/google_ad"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/ivAds" />-->
+
+            <com.ids.almouwazi.classes.CustomPager
+                android:id="@+id/pagerAds"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <ListView
+                android:id="@+id/lst_menu_items"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:divider="@android:color/transparent"
+                android:paddingTop="5dp" />
+        </LinearLayout>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

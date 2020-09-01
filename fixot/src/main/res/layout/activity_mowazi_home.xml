@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mowazi_bg"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDark"
+        android:layoutDirection="ltr"
+        android:title="null">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="back"
+            android:padding="@dimen/padding"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding"
+            android:text="@string/menu_mowazi"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/toolbar_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="@dimen/padding"
+            android:text="Status"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small"
+            android:visibility="gone" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_margin="@dimen/margin_start_end"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_footer"
+        android:layout_below="@+id/rvGrid"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_start_end"
+        android:onClick="GoToMowazi"
+        android:text="@string/powered_by_almowazi_com"
+        android:textColor="@color/colorDark"
+        android:textSize="@dimen/normal" />
+
+
+    <include
+        android:id="@+id/menu_footer"
+        layout="@layout/menu_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

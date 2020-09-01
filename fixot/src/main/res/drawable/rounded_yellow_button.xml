@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:shape="rectangle">
+    <solid android:color="@color/mowazi_buttonYellow" /> <!-- this one is ths color of the Rounded Button -->
+    <corners
+        android:bottomLeftRadius="00dp"
+        android:bottomRightRadius="00dp"
+        android:topLeftRadius="00dp"
+        android:topRightRadius="00dp" />
+</shape>

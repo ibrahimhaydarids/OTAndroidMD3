@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mowazi_dark_blue"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/llcompany"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.6"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tvCompanyHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="start"
+            android:padding="5dp"
+            android:text="@string/mowazi_company"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small" />
+
+        <ImageView
+            android:id="@+id/ivcompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/updownempty"
+            android:tag="desc"
+            android:tint="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAverageHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center|center_vertical"
+        android:padding="5dp"
+        android:text="@string/mowazi_averagePrice"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvQuantityHeader"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="center|center_vertical"
+        android:padding="5dp"
+        android:text="@string/quantity"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvValueHeader"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="center|center_vertical"
+        android:padding="5dp"
+        android:text="@string/mowazi_value"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+
+    <TextView
+        android:id="@+id/tvCountHeader"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:gravity="start|center_vertical"
+        android:padding="5dp"
+        android:text="@string/date"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small" />
+
+</LinearLayout>

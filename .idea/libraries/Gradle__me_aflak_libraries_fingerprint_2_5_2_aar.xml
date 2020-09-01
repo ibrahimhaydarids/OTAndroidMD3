@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: me.aflak.libraries:fingerprint:2.5.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dbc5def2696754545fc34475b384d31c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dbc5def2696754545fc34475b384d31c/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.aflak.libraries/fingerprint/2.5.2/facb016a4233799e3237d4d4f18b4f27220728f2/fingerprint-2.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

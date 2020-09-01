@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+
+<resources>
+
+    <string name="app_name">Q8 Securities</string>
+
+    <string name="current_version">Current Version:</string>
+
+    <string name="username">اسم المستخدم</string>
+
+    <string name="remember_me">حفظ معلومات الدخول</string>
+
+    <string name="sign_in">تسجيل دخول</string>
+    <string name="confirm">تم</string>
+    <string name="cancel">الغاء</string>
+    <string name="password">كلمة المرور</string>
+
+    <string name="no_data">No Data</string>
+
+    <string name="brokers_xml_1">http://www.ids-lb.com/iphone/FixBrokers.xml</string>
+
+    <string name="brokers_xml_2">https://www.ids-support.com/iphone/fixbrokers.xml</string>
+
+    <string name="beforekey">6aaac758332a8320840ac0e5f8fc28e2</string>
+
+    <string name="afterkey" />
+
+    <string name="change">تغير</string>
+
+    <string name="bid">عرض</string>
+
+    <string name="ask">طلب</string>
+
+    <string name="amount">كمية</string>
+
+    <string name="hi_limit">سقف عالي</string>
+
+    <string name="high">عالي</string>
+
+    <string name="is_islamic">اسلامية</string>
+
+    <string name="last">آخر سعر</string>
+
+
+    <string name="low">منخفض</string>
+
+    <string name="low_limit">سقف منخفض</string>
+
+    <string name="open">مفتوح</string>
+
+    <string name="stock_id">ستوك ايدي</string>
+
+    <string name="stock_trading_status">ستوك ترايدينغ ستاتس</string>
+
+    <string name="trades">صفقات</string>
+
+    <string name="volume">الكمية</string>
+
+    <string name="volume_ask">كمية الطلب</string>
+
+    <string name="volume_bid">كمية العرض</string>
+
+    <string name="symbol">الرمز</string>
+
+    <string name="change_percent">نسبة التغيير</string>
+
+    <string name="activate_order">تفعيل الأمر</string>
+
+    <string name="ask_quantity">كمية الطلب</string>
+
+    <string name="bid_quantity">كمية العرض</string>
+
+    <string name="buy">شراء</string>
+
+    <string name="cancel_order">الغاء الأمر</string>
+
+    <string name="date">التاريخ</string>
+
+    <string name="place_order">وضع أمر</string>
+
+    <string name="portfolio_number">رقم المحفظة</string>
+
+    <string name="price">السعر</string>
+
+    <string name="quantity">الكمية</string>
+
+    <string name="sell">بيع</string>
+
+    <string name="update_order">تعديل الأمر</string>
+    <!-- Login page -->
+    <string name="errorlogin">الرجاء ادخال اسم المستخدم وكلمة المرور</string>
+
+
+    <!-- Settings page -->
+
+    <string name="change_language">تغيير اللغة</string>
+    <string name="push_notification">الاشعارات</string>
+    <string name="forgot_password">نسيت كلمة السر؟</string>
+    <string name="forgot_username">نسيت إسم الدخول؟</string>
+    <string name="reactivate_account">تشغيل الحساب</string>
+
+    <string name="login_contactus">الإتصال بنا</string>
+    <string name="login_board">مجلس الإدارة</string>
+    <string name="login_terms">اعلانات توعوية</string>
+    <string name="login_about">نبذة عن الشركة</string>
+
+    <!-- market status values -->
+    <string name="ms_open"> مفتوح</string>
+    <string name="ms_closed"> مغلق</string>
+    <string name="ms_preopen"> قبل الافتتاح</string>
+    <string name="ms_startofday">بدء النهار</string>
+    <string name="ms_acceptance">قبول الطلبات</string>
+    <string name="ms_closing">قبل الاقفال</string>
+    <string name="ms_Inquiry">استفسار</string>
+    <string name="ms_nocancel">No-Cancel</string>
+    <string name="ms_trade_at_last">TradeAtLast </string>
+
+    <!-- menu page titles -->
+    <string name="market_index">مؤشر السوق</string>
+    <string name="sectors">القطاعات</string>
+    <string name="stock">الأسهم</string>
+    <string name="time_sales">الصفقات</string>
+    <string name="top_trades">أكثر صفقات</string>
+    <string name="top_value">أكثر قيمة</string>
+    <string name="top_gainer">أكثر إرتفاعاً</string>
+    <string name="top_looser">أكثر إنخفاضاً</string>
+    <string name="top_traded">أكثر تداولاً</string>
+    <string name="portfolio">المحفظة</string>
+    <string name="orders">الأوامر</string>
+    <string name="news">الأخبار</string>
+    <string name="favorite">مفضلة</string>
+    <string name="links">روابط</string>
+    <string name="order_book">سجل الأوامر</string>
+    <string name="register">تسجيل</string>
+    <string name="trading_info">معلومات للتداول</string>
+    <string name="membership_terms">شروط الإنتساب</string>
+    <string name="market_state_title">السوق:</string>
+    <string name="market_time_title">وقت السوق:</string>
+    <string name="last_weight_title">المؤشر الوزني</string>
+    <string name="value_weight_title">قيمة المؤشر</string>
+    <string name="change_weight_title"> التغيير الوزني</string>
+    <string name="change_weight_percent_title">نسبة التغيير</string>
+    <string name="trades_title">الصفقات</string>
+    <string name="amount_title">القيمة</string>
+    <string name="volume_title">الكمية</string>
+
+    <!-- stocklist page -->
+    <string name="change_title">التغيير</string>
+    <string name="price_title">السعر</string>
+    <string name="stock_name_title">السهم</string>
+    <string name="search">البحث</string>
+    <string name="account_statement_title">كشف حساب</string>
+    <!-- menufooter case text -->
+    <string name="menu_marketindex">مؤشر السوق</string>
+    <string name="menu_portfolio">المحفظة</string>
+    <string name="menu_orders">الأوامر</string>
+    <string name="menu_stocks">الأسهم</string>
+    <string name="menu_sectors">القطاعات</string>
+    <string name="menu_favorites">أسهمي</string>
+    <string name="menu_mowazi">الموازي</string>
+    <string name="menu_bond_prices">أسعار السندات</string>
+    <string name="source">المصدر</string>
+    <string name="menu_more">إضافات</string>
+
+    <!-- userData object titles -->
+    <string name="limit_title">الهامش</string>
+    <string name="credit_title">نقد</string>
+    <string name="pending_title">أوامر الشراء المعلّقة</string>
+    <string name="debit_title"> الدين </string>
+    <string name="bank_balance_title"> الرصيد المصرفي </string>
+    <string name="Total_portfolio_title">المجموع الكلّي</string>
+
+    <string name="purchase_power_title">طاقة الشراء</string>
+    <string name="trade_purchase_power_title">طاقة الشراء</string>
+
+    <!-- portfolio -->
+    <string name="pdf_text">كشف حساب</string>
+    <string name="unrealized_title">ربح/خسارة</string>
+    <string name="bid_ask_title">متوسط السعر</string>
+    <string name="quantity_cost_title">عدد/قيمة</string>
+    <string name="trading_title">التداول</string>
+    <string name="delete">حذف</string>
+    <string name="symbol_title">الرمز</string>
+
+
+    <!-- forward stock header titles -->
+    <string name="fs_symbol">الرمز</string>
+    <string name="fs_num">الرقم</string>
+    <string name="fs_date">التاريخ</string>
+    <string name="fs_org_qtty">اصل الكمية</string>
+    <string name="fs_rem_qtty">الكمية المتبقية</string>
+    <string name="fs_cost">سعر الكلفة</string>
+    <string name="fs_bprice">سعر الفسخ</string>
+    <string name="fs_rem_cost">الكلفة المتبقية</string>
+    <string name="fs_due_date">الإستحقاق</string>
+    <string name="noData">لا يوجد معلومات</string>
+    <string name="logout">خروج</string>
+
+    <!-- stock object titles -->
+    <string name="stock_bid_title">الطلب</string>
+    <string name="stock_ask_title">العرض</string>
+    <string name="stock_high_title">اعلى</string>
+    <string name="stock_low_title">ادنى</string>
+    <string name="stock_open_title">الإفتتاح</string>
+    <string name="stock_previous_title">الإقفال السابق</string>
+    <string name="stock_value_title">آخر صفقة</string>
+    <string name="stock_trades_title">الصفقات</string>
+    <string name="stock_change_title">التغيير</string>
+    <string name="stock_volume_title">الكمية</string>
+    <string name="stock_amount_title">القيمة</string>
+    <string name="stock_change_percent_title">التغيير%</string>
+    <string name="stock_bid_quantity_title">الكمية المطلوبة </string>
+    <string name="stock_ask_quantity_title">الكمية المعروضة</string>
+</resources>

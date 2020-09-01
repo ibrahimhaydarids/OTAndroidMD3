@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="@dimen/bottom_bar_width_height"
+            android:layout_height="@dimen/bottom_bar_width_height"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:onClick="loadPagebottombar"
+            android:background="@android:color/transparent"
+            android:src="@drawable/hometwo"
+            android:id="@+id/home"/>
+
+        <TextView
+            android:id="@+id/tvBottomHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone"
+            android:text="@string/communityHome"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="@dimen/bottom_bar_width_height"
+            android:layout_height="@dimen/bottom_bar_width_height"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_margin="5dp"
+            android:padding="2dp"
+            android:onClick="loadPagebottombar"
+            android:background="@android:color/transparent"
+            android:src="@drawable/time"
+            android:id="@+id/marketWatch"/>
+
+
+        <TextView
+            android:id="@+id/tvBottomOtc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone"
+            android:gravity="bottom"
+            android:text="@string/bottom_otc"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="@dimen/bottom_bar_width_height"
+            android:layout_height="@dimen/bottom_bar_width_height"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:onClick="loadPagebottombar"
+            android:background="@android:color/transparent"
+            android:src="@drawable/favorite_bar"
+            android:id="@+id/favorite"/>
+
+
+
+        <TextView
+            android:id="@+id/tvBottomfavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone"
+            android:text="@string/bottom_favorite"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:onClick="loadPagebottombar"
+        android:src="@drawable/my_trades_bar"
+        android:background="@android:color/transparent"
+        android:id="@+id/trade"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:onClick="loadPagebottombar"
+        android:background="@android:color/transparent"
+        android:layout_weight="1"
+        android:src="@drawable/my_orders_bar"
+        android:id="@+id/order"/>
+
+</LinearLayout>

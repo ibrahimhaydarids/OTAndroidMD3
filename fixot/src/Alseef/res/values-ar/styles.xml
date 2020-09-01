@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--<attr name="colorValues" format="reference|color" />-->
+    <!--<attr name="colorLight" format="reference|color" />-->
+    <!--<attr name="colorDark" format="reference|color" />-->
+    <!--<attr name="colorPrimaryTopDark" format="reference|color" />-->
+    <!--<attr name="oddColor" format="reference|color" />-->
+    <!--<attr name="evenColor" format="reference|color" />-->
+
+    <!--<declare-styleable name="AppTheme.NoActionBar">-->
+    <!--<attr name="colorValues"/>-->
+    <!--<attr name="colorLight"/>-->
+    <!--<attr name="colorDark"/>-->
+    <!--<attr name="colorPrimaryTopDark"/>-->
+    <!--<attr name="oddColor"/>-->
+    <!--<attr name="evenColor"/>-->
+    <!--</declare-styleable>-->
+
+    <!--<style name="AppTheme.NoActionBar" parent="AppTheme">-->
+    <!--<item name="windowActionBar">false</item>-->
+    <!--<item name="windowNoTitle">true</item>-->
+    <!--<item name="android:textAllCaps">false</item>-->
+
+    <!--<item name="colorValues">@color/colorValues</item>-->
+    <!--<item name="colorLight">@color/colorLight</item>-->
+    <!--<item name="colorDark">@color/colorDark</item>-->
+    <!--<item name="colorPrimaryTopDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="oddColor">@color/colorLight</item>-->
+    <!--<item name="evenColor">@color/white</item>-->
+    <!--</style>-->
+
+    <!--<declare-styleable name="AppTheme.NoActionBar_Dark">-->
+    <!--<attr name="colorValues"/>-->
+    <!--<attr name="colorLight"/>-->
+    <!--<attr name="colorDark"/>-->
+    <!--<attr name="colorPrimaryTopDark"/>-->
+    <!--<attr name="oddColor"/>-->
+    <!--<attr name="evenColor"/>-->
+    <!--</declare-styleable>-->
+
+    <!--<style name="AppTheme.NoActionBar_Dark" parent="AppTheme">-->
+    <!--<item name="windowActionBar">false</item>-->
+    <!--<item name="windowNoTitle">true</item>-->
+    <!--<item name="android:textAllCaps">false</item>-->
+
+    <!--<item name="colorValues">@color/white</item>-->
+    <!--<item name="colorLight">@color/colorLightTheme</item>-->
+    <!--<item name="colorDark">@color/colorDarkTheme</item>-->
+    <!--<item name="colorPrimaryTopDark">@color/colorPrimaryDarkTheme</item>-->
+    <!--<item name="oddColor">@color/colorLightTheme</item>-->
+    <!--<item name="evenColor">@color/colorDarkTheme</item>-->
+    <!--</style>-->
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.NoTitleBar">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="titleStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="titleLandStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+    <style name="textListHeader">
+        <item name="android:textColor">@color/colorValues</item>
+        <item name="android:textSize">@dimen/normal</item>
+    </style>
+
+    <style name="InstrumentsItemsLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TopsItemsLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="textListItem">
+        <item name="android:textColor">?attr/colorValues</item>
+        <item name="android:textSize">@dimen/normal</item>
+    </style>
+</resources>
+
+    <!--<style name="AppTheme.NoActionBar">--><!--<item name="windowActionBar">false</item>--><!--<item name="windowNoTitle">true</item>--><!--</style>-->

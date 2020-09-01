@@ -1,0 +1,227 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+
+    compileSdkVersion 28
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.ids.fixot"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "7.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    flavorDimensions "color"
+    productFlavors {
+
+        Alseef {
+            applicationId "com.ids.fixot.alseefnew"
+            buildConfigField 'String', "BrokerId", "\"15\""
+            buildConfigField 'String', "label", "\"waseet\""
+            buildConfigField 'boolean', "Enable_Media", "false"
+            buildConfigField 'boolean', "GoToMenu", "false"
+
+/*            buildConfigField 'String', "BaseMD3Link", "\"https://online.waseet.com.kw/md3androidservice/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"https://online.waseet.com.kw/md3androidservice/Services/DataService.svc\""*/
+
+            buildConfigField 'String', "BaseMD3Link", "\"https://online.waseet.com.kw/MD3androidserviceNew/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"https://online.waseet.com.kw/MD3androidserviceNew/Services/DataService.svc\""
+
+            dimension "color"
+            minSdkVersion 21
+            targetSdkVersion 28
+            versionCode 19
+            versionName '11.6'
+        }
+
+        Tijari {
+            applicationId "com.ids.fixot.usbc" //com.ids.usbc
+            buildConfigField 'String', "BrokerId", "\"662\""
+            buildConfigField 'String', "label", "\"tijari\""
+            buildConfigField "boolean", "Enable_Media", "true"
+            buildConfigField 'boolean', "GoToMenu", "false"
+
+
+            buildConfigField 'String', "BaseMD3Link", "\"http://appiph.usbc.com.kw/MD3AndroidService/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://appiph.usbc.com.kw/MD3AndroidService/Services/DataService.svc\""
+/*
+            buildConfigField 'String', "BaseMD3Link", "\"http://appiph.usbc.com.kw/MD3iPhoneserviceTest/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://appiph.usbc.com.kw/MD3iPhoneserviceTest/Services/DataService.svc\""
+*/
+
+
+
+/*           buildConfigField 'String', "BaseMD3Link", "\"http://10.2.2.103/OTWebService/Mobile/\""
+           buildConfigField 'String', "MD3Link", "\"http://10.2.2.103/OTWebService/Services/DataService.svc\""*/
+            dimension "color"
+            minSdkVersion 21
+            targetSdkVersion 28
+            versionCode 244
+            versionName '9.0'
+        }
+
+
+        TijariOtc {
+            applicationId "com.ids.fixot.usbcOtc" //com.ids.usbc
+            buildConfigField 'String', "BrokerId", "\"662\""
+            buildConfigField 'String', "label", "\"tijariOtc\""
+            buildConfigField "boolean", "Enable_Media", "false"
+            buildConfigField 'boolean', "GoToMenu", "true"
+
+            buildConfigField 'String', "BaseMD3Link", "\"http://appiph.usbc.com.kw/OTCService/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://appiph.usbc.com.kw/OTCService/Services/DataService.svc\""
+
+            dimension "color"
+            minSdkVersion 21
+            targetSdkVersion 28
+
+            versionCode 227 //4
+            versionName '7.6'
+        }
+
+
+        Oula {
+            applicationId "com.ids.fixot.aloula"
+            buildConfigField 'String', "BrokerId", "\"9\""
+            buildConfigField 'String', "label", "\"oula\""
+            buildConfigField 'boolean', "Enable_Media", "false"
+            buildConfigField 'boolean', "GoToMenu", "false"
+
+            buildConfigField 'String', "BaseMD3Link", "\"http://www.oulawasata.com.kw/MD3Androidservicetest/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://www.oulawasata.com.kw/MD3Androidservicetest/Services/DataService.svc\""
+
+            dimension "color"
+            minSdkVersion 21
+            targetSdkVersion 28
+            versionCode 210
+            versionName '8.4'
+        }
+
+        Kic {
+            applicationId "com.ids.fixot.kic"
+            buildConfigField 'String', "BrokerId", "\"14\""
+            buildConfigField 'String', "label", "\"kic\""
+            buildConfigField 'boolean', "Enable_Media", "false"
+            buildConfigField 'boolean', "GoToMenu", "false"
+            buildConfigField 'String', "BaseMD3Link", "\"http://195.39.136.19/MD3AndroidService/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://195.39.136.19/MD3AndroidService/Services/DataService.svc\""
+     /*       buildConfigField 'String', "BaseMD3Link", "\"http://195.39.136.19/MD3Iphoneservice/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://195.39.136.19/MD3Iphoneservice/Services/DataService.svc\""
+*/
+
+            dimension "color"
+            minSdkVersion 21
+            targetSdkVersion 28
+            versionCode 228
+            versionName '9.6'
+        }
+
+        Sharq {
+            applicationId "com.ids.fixot.sharq"
+            buildConfigField 'String', "BrokerId", "\"16\""
+            buildConfigField 'String', "label", "\"sharq\""
+            buildConfigField 'boolean', "Enable_Media", "false"
+            buildConfigField 'boolean', "GoToMenu", "false"
+
+   /*         buildConfigField 'String', "BaseMD3Link", "\"http://trade.sharqetrade.com/md3androidservice/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://trade.sharqetrade.com/md3androidservice/Services/DataService.svc\""
+*/
+/*            buildConfigField 'String', "BaseMD3Link", "\"http://trade.sharqetrade.com/testmd3iphoneservice/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://trade.sharqetrade.com/testmd3iphoneservice/Services/DataService.svc\""*/
+
+            buildConfigField 'String', "BaseMD3Link", "\"http://trade.sharqetrade.com/md3androidservice/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"http://trade.sharqetrade.com/md3androidservice/Services/DataService.svc\""
+
+
+            dimension "color"
+            minSdkVersion 21
+            targetSdkVersion 28
+            versionCode 63
+            versionName '17.2'
+        }
+
+        KicOtc {
+            applicationId "com.ids.fixot.kicWasOtc"
+            buildConfigField 'String', "BrokerId", "\"140\""
+            buildConfigField 'String', "label", "\"kicOtc\""
+            buildConfigField 'boolean', "Enable_Media", "false"
+            buildConfigField 'boolean', "GoToMenu", "true"
+            buildConfigField 'String', "BaseMD3Link", "\"http://www.kiconlinetrading.kicwasata.com/iphoneotcwebservice/\""
+            buildConfigField 'String', "MD3Link", "\"http://www.kiconlinetrading.kicwasata.com/iphoneotcwebservice/Services/DataService.svc\""
+
+            dimension "color"
+            minSdkVersion 21
+            targetSdkVersion 28
+            versionCode 5
+            versionName '1.2'
+        }
+
+        AlseefOtc {
+            applicationId "com.ids.alseefOtc"
+            buildConfigField 'String', "BrokerId", "\"150\""
+            buildConfigField 'String', "label", "\"waseetOtc\""
+            buildConfigField 'boolean', "Enable_Media", "false"
+            buildConfigField 'boolean', "GoToMenu", "false"
+
+            buildConfigField 'String', "BaseMD3Link", "\"https://www.waseet.com.kw/MobileServiceOTC/Mobile/\""
+            buildConfigField 'String', "MD3Link", "\"https://www.waseet.com.kw/MobileServiceOTC/Services/DataService.svc\""
+
+            dimension "color"
+            minSdkVersion 21
+            targetSdkVersion 28
+            versionCode 7
+            versionName '8.9'
+        }
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            lintOptions {
+                disable 'MissingTranslation'
+                checkReleaseBuilds false
+                abortOnError false
+
+            }
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+repositories {
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'info.hoang8f:android-segmented:1.0.6'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+    implementation 'me.aflak.libraries:fingerprint:2.5.2'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.3.4'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.android.support:support-v4:28.0.0'
+
+
+
+
+}

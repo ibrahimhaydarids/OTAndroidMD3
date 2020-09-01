@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lllayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:gravity="center"
+    android:minHeight="@dimen/item_height"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/mini_padding"
+    android:paddingTop="1sp"
+    android:paddingRight="@dimen/mini_padding"
+    android:paddingBottom="1sp">
+    <!--android:weightSum="6"-->
+
+    <TextView
+        android:id="@+id/tvSector"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="2.9"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/stock_id"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/normal" />
+
+    <TextView
+        android:id="@+id/tvIndexValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.2"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/ask"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvChangePercent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.3"
+        android:gravity="center"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/bid"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/small" />
+    <!--android:textDirection="ltr"-->
+
+    <ImageButton
+        android:id="@+id/btStocks"
+        android:layout_width="@dimen/item_height"
+        android:layout_height="@dimen/item_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/mini_margin"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:background="?attr/gray"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:padding="4sp"
+        android:scaleType="centerInside"
+        android:src="@drawable/stock"
+        android:tint="?attr/colorDark" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/mini_margin"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_weight="1"
+        android:background="?attr/gray"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:text="@string/stock"
+        android:textColor="?attr/colorDark"
+        android:textSize="@dimen/small"
+        android:visibility="gone" />
+    <!--android:background="@drawable/tradebuttondrawable"-->
+    <!--android:id="@+id/btStocks"-->
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tvCompanyItem"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="start|center_horizontal"
+        android:lines="2"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Company name"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvAverageItem"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="average"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvQuantityItem"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="center_horizontal"
+        android:padding="3dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="quantity"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvValue"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.3"
+        android:gravity="end|center_horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="volume"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvCountItem"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="end|center_horizontal"
+        android:padding="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="count"
+        android:textSize="@dimen/small" />
+
+</LinearLayout>

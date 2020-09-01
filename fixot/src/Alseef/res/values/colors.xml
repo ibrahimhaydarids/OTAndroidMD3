@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#1c2144</color>
+    <!--<color name="colorPrimaryDark">#191e3f</color>-->
+    <color name="colorAccent">#6BA2B8</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="app_color">#000000</color>
+    <color name="red_color">#ef4e50</color>
+    <color name="green_color">#4bba73</color>
+    <color name="lightgrey">#D3D3D3</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="tradegrey">#C5C5C5</color>
+    <color name="darkgray">#A9A9A9</color>
+    <color name="lightlightgrey">#F2F2F2</color>
+    <color name="buttonlightgrey">#E6E6E6</color>
+    <color name="closed_market">#FF0000</color>
+    <color name="opened_market">#00B400</color>
+    <color name="other_market">#FF8000</color>
+    <color name="orange">#F29C44</color>
+    <color name="yellow">#ffff00</color>
+
+    <!--<color name="timesales_light_row">#ef6aa0</color>
+    <color name="timesales_dark_row">#f2aace</color>-->
+    <color name="timesales_light_row">#ef8fb6</color>
+    <color name="timesales_dark_row">#edc0d6</color>
+
+    <color name="gray">#d9d9d9</color>
+    <color name="colorValues">#4b4b4b</color>
+    <color name="colorValuesInv">#cbcbcb</color>
+    <color name="colorLight">#F2F2F2</color>
+    <color name="colorMedium">#E6E6E6</color>
+    <color name="colorMediumTransparent">#A6E6E6E6</color>
+    <color name="colorDark">#293064</color>
+    <color name="splash_bg_color">@color/colorLight</color>
+</resources>

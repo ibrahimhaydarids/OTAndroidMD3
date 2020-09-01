@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rllayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:gravity="center"
+    android:minHeight="@dimen/item_height"
+    android:orientation="horizontal"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp">
+
+    <Button
+        android:id="@+id/btTrades"
+        android:layout_width="@dimen/trades_button_width"
+        android:layout_height="@dimen/trades_button_height"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/mini_margin"
+        android:background="?attr/gray"
+        android:clipToPadding="false"
+        android:elevation="@dimen/button_elevation"
+        android:text="T"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/large" />
+    <!--android:background="@color/white"-->
+    <!--android:background="@drawable/tradebuttondrawable"-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/item_linear_layout"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_toEndOf="@id/btTrades"-->
+    <!--android:layout_toStartOf="@+id/rlChange"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:focusable="false"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:visibility="visible">-->
+
+
+    <FrameLayout
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.95">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStockId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/stock"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+
+            <TextView
+                android:id="@+id/tvStockSymbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/stock"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/normal" />
+
+            <TextView
+                android:id="@+id/tvStockName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:maxLines="1"
+                android:text="@string/stock"
+                android:textColor="?attr/colorValues"
+                android:textSize="@dimen/small" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:paddingEnd="@dimen/mini_padding"
+            android:text="@string/session_title"
+            android:textColor="?attr/colorValues"
+            android:textSize="@dimen/small" />
+
+    </FrameLayout>
+
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="0sp"-->
+    <!--android:layout_weight="1.7"-->
+    <!--android:layout_height="wrap_content">-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.95"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvStockId"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:text="@string/stock"-->
+    <!--android:textColor="?attr/colorValues"-->
+    <!--android:textSize="@dimen/small" />-->
+
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:orientation="horizontal" >&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvStockSymbol"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:text="@string/stock"-->
+    <!--android:layout_weight="0.65"-->
+    <!--android:textColor="?attr/colorValues"-->
+    <!--android:textSize="@dimen/normal" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvSession"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.3"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:paddingEnd="@dimen/mini_padding"-->
+    <!--android:layout_gravity="end|center_vertical"-->
+    <!--android:text="@string/session_title"-->
+    <!--android:textColor="?attr/colorValues"-->
+    <!--android:textSize="@dimen/small" />-->
+    <!--&lt;!&ndash;android:layout_marginBottom="@dimen/small_margin"&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvStockName"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:maxLines="1"-->
+    <!--android:text="@string/stock"-->
+    <!--android:textColor="?attr/colorValues"-->
+    <!--android:textSize="@dimen/small" />-->
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+    <!--</FrameLayout>-->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_weight="0.26"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="3dp"
+            android:text="@string/stock"
+            android:textColor="?attr/colorValues"
+            android:textSize="@dimen/small" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/stock"
+            android:textColor="?attr/colorValues"
+            android:textSize="@dimen/header" />
+
+        <TextView
+            android:id="@+id/tvHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="3dp"
+            android:text="@string/stock"
+            android:textColor="?attr/colorValues"
+            android:textSize="@dimen/small" />
+
+    </LinearLayout>
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/rlChange"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="0.26"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvChange"
+            android:layout_width="@dimen/change_button_width"
+            android:layout_height="@dimen/change_button_height"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/mini_margin"
+            android:layout_marginEnd="@dimen/mini_margin"
+            android:background="@color/orange"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@android:color/white"
+            android:textDirection="ltr" />
+
+    </RelativeLayout>
+
+</LinearLayout>

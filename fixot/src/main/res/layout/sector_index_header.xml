@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorMedium"
+    android:minHeight="@dimen/header_height"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/mini_padding"
+    android:paddingTop="1sp"
+    android:paddingRight="@dimen/mini_padding"
+    android:paddingBottom="1sp">
+    <!--@dimen/mini_padding-->
+
+    <TextView
+        android:id="@+id/tvStockIDHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="2.9"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/sector"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/normal" />
+
+    <TextView
+        android:id="@+id/tvPriceHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.2"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/amount_title"
+        android:textColor="?attr/colorValues"
+        android:textSize="@dimen/normal" />
+
+    <TextView
+        android:id="@+id/tvChangePercentHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.3"
+        android:gravity="center"
+        android:padding="@dimen/mini_padding"
+        android:text="@string/change_percent"
+        android:textColor="?attr/colorValues"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="@dimen/item_height"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:padding="@dimen/mini_padding"
+        android:textColor="?attr/colorValues"
+        android:textSize="12sp" />
+</LinearLayout>

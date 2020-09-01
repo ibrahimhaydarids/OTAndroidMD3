@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorDarkHeader"
+            android:elevation="4dp"
+            android:layoutDirection="ltr"
+            android:title="null">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="back"
+                android:padding="@dimen/padding"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding"
+                android:textColor="?attr/colorDark"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/status"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal|center_vertical|end"
+                android:layout_margin="8dp"
+                android:padding="5dp" />
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorMedium"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="sdsdsd"
+                        android:textColor="?attr/colorValues"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <!--android:gravity="right"-->
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llTitle"
+                        android:padding="4dp"
+                        android:textColor="?attr/colorValues" />
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/btSource"
+                        android:layout_below="@+id/tvDate"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginBottom="40sp"
+                        android:padding="4dp"
+                        android:text="description"
+                        android:textColor="?attr/colorValues" />
+
+                    <Button
+                        android:id="@+id/btSource"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="?attr/colorDark"
+                        android:onClick="goTo"
+                        android:padding="5dp"
+                        android:text="@string/source"
+                        android:textColor="@color/colorLight" />
+
+                </LinearLayout>
+
+
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:abo="@+id/tvDescription"-->
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <include
+
+        android:id="@+id/footer"
+        layout="@layout/menu_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

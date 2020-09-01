@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:weightSum="6">
+
+    <TextView
+        android:id="@+id/tvStockIDItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="3"
+        android:padding="4dp"
+        android:text="@string/stock_id"
+        android:textColor="@color/colorDark"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvAskItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:text="@string/ask"
+        android:textColor="@color/colorDark"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvBidItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1"
+        android:padding="4dp"
+        android:text="@string/bid"
+        android:textColor="@color/colorDark"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btStocks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/tradebuttondrawable"
+        android:text="@string/stock"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

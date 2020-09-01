@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center_vertical"
+    android:background="?attr/colorLight"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <AutoCompleteTextView
+        android:id="@+id/autotext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusedByDefault="true"
+        android:nextFocusLeft="@id/autotext"
+        android:nextFocusUp="@id/autotext"
+        android:visibility="gone" />
+
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:background="@drawable/edittext_border"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:padding="5dp"
+        android:textAlignment="viewStart" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_below="@+id/etUsername"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_border"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:textAlignment="viewStart" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:layout_marginTop="@dimen/margin_top_bottom"
+        android:layout_marginBottom="@dimen/margin_top_bottom"
+        android:clipToPadding="false"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/mini_margin"
+            android:layout_marginBottom="@dimen/mini_margin"
+            android:background="?attr/colorDark"
+            android:clipToPadding="false"
+            android:elevation="@dimen/button_elevation"
+            android:padding="@dimen/mini_padding"
+            android:text="@string/login"
+            android:textColor="?attr/colorLight" />
+
+
+        <CheckBox
+            android:id="@+id/cbRemember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/mini_margin"
+            android:layout_marginEnd="@dimen/margin_start_end"
+            android:layout_marginBottom="@dimen/mini_margin"
+            android:buttonTint="?attr/colorDark"
+            android:text="@string/remember_me"
+            android:textColor="?attr/colorValues" />
+    </LinearLayout>
+
+
+</RelativeLayout>

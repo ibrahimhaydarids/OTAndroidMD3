@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+
+    <TextView
+        android:id="@+id/tvCompanyItem"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Company name"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvQuantityItem"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Quantity"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvPriceItem"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Price"
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/tvDateItem"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Jan 18,2016"
+        android:textSize="10sp" />
+
+</LinearLayout>

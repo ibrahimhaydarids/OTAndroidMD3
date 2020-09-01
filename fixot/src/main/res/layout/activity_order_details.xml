@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorLight"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorDarkHeader"
+        android:elevation="4dp"
+        android:layoutDirection="ltr"
+        android:title="null">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="back"
+            android:padding="@dimen/padding"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding"
+            android:textColor="@color/colorDark"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/status"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal|center_vertical|end"
+            android:layout_margin="8dp"
+            android:padding="5dp" />
+    </android.support.v7.widget.Toolbar>
+
+    <include
+        android:id="@+id/rlUserHeader"
+        layout="@layout/user_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_below="@+id/my_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/llStockOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlUserHeader"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/mini_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/mini_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvStockTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:padding="@dimen/mini_padding"
+            android:textColor="@color/colorDark"
+            android:textSize="@dimen/normal" />
+
+        <Button
+            android:id="@+id/btTimeSales"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/mini_margin"
+            android:background="@color/colorDark"
+            android:onClick="goTo"
+            android:padding="@dimen/mini_padding"
+            android:text="@string/trades_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small" />
+
+        <Button
+            android:id="@+id/btOrderBook"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:background="@color/colorDark"
+            android:onClick="goTo"
+            android:padding="@dimen/mini_padding"
+            android:text="@string/order_book"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvOrderDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llOrderOptions"
+        android:layout_below="@+id/llStockOptions" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llOrderOptions"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_margin="@dimen/mini_margin"-->
+    <!--android:visibility="gone"-->
+    <!--android:gravity="center_horizontal">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btCancel"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="@dimen/button_height"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginEnd="@dimen/mini_margin"-->
+    <!--android:background="@color/colorDark"-->
+    <!--android:onClick="goTo"-->
+    <!--android:padding="@dimen/mini_padding"-->
+    <!--android:text="@string/cancel"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/small" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btEdit"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="@dimen/button_height"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@color/colorDark"-->
+    <!--android:layout_marginEnd="@dimen/mini_margin"-->
+    <!--android:onClick="goTo"-->
+    <!--android:padding="@dimen/mini_padding"-->
+    <!--android:text="@string/edit"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/small" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/llOrderOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/mini_margin"
+        android:gravity="center_horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btActivate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/mini_margin"
+            android:layout_weight="1"
+            android:background="@color/green_color"
+            android:onClick="goTo"
+            android:padding="@dimen/mini_padding"
+            android:text="@string/activate_order"
+            android:textColor="?attr/evenColor"
+            android:textSize="@dimen/small" />
+
+        <Button
+            android:id="@+id/btQuickEdit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/mini_margin"
+            android:layout_weight="1"
+            android:background="?attr/colorDark"
+            android:onClick="goTo"
+            android:padding="@dimen/mini_padding"
+            android:text="@string/quick_edit"
+            android:textColor="?attr/evenColor"
+            android:textSize="@dimen/small" />
+
+        <Button
+            android:id="@+id/btEdit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/mini_margin"
+            android:layout_weight="1"
+            android:background="?attr/colorDark"
+            android:onClick="goTo"
+            android:padding="@dimen/mini_padding"
+            android:text="@string/edit"
+            android:textColor="?attr/evenColor"
+            android:textSize="@dimen/small" />
+
+        <Button
+            android:id="@+id/btCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/mini_margin"
+            android:layout_weight="1"
+            android:background="@color/red_color"
+            android:onClick="goTo"
+            android:padding="@dimen/mini_padding"
+            android:text="@string/cancel"
+            android:textColor="?attr/evenColor"
+            android:textSize="@dimen/small" />
+
+
+    </LinearLayout>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/famOrderMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="@color/colorDark"
+        fab:menu_colorPressed="@color/colorDark"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_fab_label="@string/order_options"
+        fab:menu_fab_size="mini"
+        fab:menu_icon="@drawable/options"
+        fab:menu_labels_colorNormal="@color/colorValues"
+        fab:menu_labels_colorPressed="@color/colorValues"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_paddingBottom="4dp"
+        fab:menu_labels_paddingLeft="8dp"
+        fab:menu_labels_paddingRight="8dp"
+        fab:menu_labels_paddingTop="4dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#FFFFFF"
+        fab:menu_labels_textSize="14sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="3dp"
+        fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabFastEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goTo"
+            android:src="@drawable/fast_edit"
+            fab:fab_colorDisabled="@color/colorValues"
+            fab:fab_colorNormal="@color/colorDark"
+            fab:fab_label="@string/fast_edit"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goTo"
+            android:src="@drawable/order_edit"
+            fab:fab_colorDisabled="@color/colorValues"
+            fab:fab_colorNormal="@color/colorDark"
+            fab:fab_label="@string/edit"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goTo"
+            android:src="@drawable/trash"
+            android:tint="@color/white"
+            fab:fab_colorDisabled="@color/colorValues"
+            fab:fab_colorNormal="@color/colorDark"
+            fab:fab_label="@string/cancel"
+            fab:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/famOrderMenuRTL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="@color/colorDark"
+        fab:menu_colorPressed="@color/colorDark"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_fab_label="@string/order_options"
+        fab:menu_fab_size="mini"
+        fab:menu_icon="@drawable/options"
+        fab:menu_labels_colorNormal="@color/colorValues"
+        fab:menu_labels_colorPressed="@color/colorValues"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_paddingBottom="4dp"
+        fab:menu_labels_paddingLeft="8dp"
+        fab:menu_labels_paddingRight="8dp"
+        fab:menu_labels_paddingTop="4dp"
+        fab:menu_labels_position="right"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#FFFFFF"
+        fab:menu_labels_textSize="14sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="3dp"
+        fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabFastEditRTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goTo"
+            android:src="@drawable/fast_edit"
+            fab:fab_colorDisabled="@color/colorValues"
+            fab:fab_colorNormal="@color/colorDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_label="@string/fast_edit"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabEditRTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goTo"
+            android:src="@drawable/order_edit"
+            fab:fab_colorDisabled="@color/colorValues"
+            fab:fab_colorNormal="@color/colorDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_label="@string/edit"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabCancelRTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goTo"
+            android:src="@drawable/trash"
+            fab:fab_colorDisabled="@color/colorValues"
+            fab:fab_colorNormal="@color/colorDark"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_label="@string/cancel"
+            fab:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

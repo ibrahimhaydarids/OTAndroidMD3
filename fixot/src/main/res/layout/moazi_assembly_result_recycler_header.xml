@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darkblue"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:gravity="start|center_vertical"
+        android:textSize="10sp"
+        android:paddingStart="5dp"
+        android:id="@+id/tvOrganizationHeader"
+        android:text="@string/organization" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="1dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:gravity="start|center_vertical"
+        android:id="@+id/tvYearHeader"
+        android:textSize="10sp"
+        android:text="@string/year" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="1dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:gravity="start|center_vertical"
+        android:id="@+id/tvTypeHeader"
+
+        android:textSize="10sp"
+        android:text="@string/orgType" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="1dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:gravity="start|center_vertical"
+        android:id="@+id/tvCapitalHeader"
+        android:textSize="10sp"
+        android:text="@string/capitalKWD" />
+
+</LinearLayout>

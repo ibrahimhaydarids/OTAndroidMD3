@@ -1,0 +1,47 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="small">12sp</dimen>
+    <dimen name="normal">13sp</dimen>
+    <dimen name="header">15sp</dimen>
+    <dimen name="large">18sp</dimen>
+
+    <dimen name="chart_bottom_margin">20dp</dimen>
+    <dimen name="small_margin">5dp</dimen>
+    <dimen name="mini_margin">8dp</dimen>
+    <dimen name="margin_start_end">16dp</dimen>
+    <dimen name="margin_top_bottom">12dp</dimen>
+    <dimen name="margin_top_logo">75dp</dimen>
+
+    <dimen name="mini_padding">5dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="log_out_padding">20dp</dimen>
+
+
+    <dimen name="change_button_height">30dp</dimen>
+    <dimen name="change_button_width">80dp</dimen>
+    <dimen name="trades_button_height">45dp</dimen>
+    <dimen name="trades_button_width">45dp</dimen>
+    <dimen name="chart_height">50dp</dimen>
+    <dimen name="settings_row_height">60dp</dimen>
+    <dimen name="trades_ticker_height">30dp</dimen>
+    <dimen name="button_height">40dp</dimen>
+    <dimen name="button_width">40dp</dimen>
+    <dimen name="header_height">50dp</dimen>
+    <dimen name="item_height">40dp</dimen>
+    <dimen name="item_width">40dp</dimen>
+    <dimen name="spinner_width">100dp</dimen>
+    <dimen name="more_image_width">40dp</dimen>
+    <dimen name="more_image_height">40dp</dimen>
+    <dimen name="trades_page_items_height">50dp</dimen>
+    <dimen name="trade_action_button_width">120dp</dimen>
+    <dimen name="menu_item_height">80dp</dimen>
+    <dimen name="menu_item_width">80dp</dimen>
+    <dimen name="market_status_item">150dp</dimen>
+    <dimen name="market_status_height">35dp</dimen>
+    <dimen name="edit_text_height">55dp</dimen>
+
+    <dimen name="expand_web">30dp</dimen>
+
+    <dimen name="mowazi_top_width">200dp</dimen>
+    <dimen name="mowazi_top_height">55dp</dimen>
+</resources>

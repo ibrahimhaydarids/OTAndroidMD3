@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorLight"
+    android:clipToPadding="false"
+    android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/trades_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/small_margin"
+        android:background="?attr/gray"
+        android:clipToPadding="false"
+        android:elevation="@dimen/button_elevation"
+        android:text="T"
+        android:textColor="?attr/colorDark"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/symbol_title"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/symbol_title"
+            android:textColor="?attr/colorValues" />
+
+        <TextView
+            android:id="@+id/symbol_code"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/quantity_cost_title"
+            android:textColor="?attr/colorValues"
+            android:textDirection="ltr" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/quantity_cost_title"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/quantity_cost_title"
+            android:textColor="?attr/colorValues"
+            android:textDirection="ltr" />
+
+
+        <TextView
+            android:id="@+id/volume_cost_title"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/quantity_cost_title"
+            android:textColor="?attr/colorValues"
+            android:textDirection="ltr" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bid_ask_title"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/bid_ask_title"
+            android:textColor="?attr/colorValues"
+            android:textDirection="ltr" />
+
+
+        <TextView
+            android:id="@+id/tvLast"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/last_price_title"
+            android:textColor="?attr/colorValues"
+            android:textDirection="ltr" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/unrealized_title"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/unrealized_title"
+            android:textColor="?attr/colorValues"
+            android:textDirection="ltr" />
+
+        <TextView
+            android:id="@+id/unrealized_percent"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/unrealized_title"
+            android:textColor="?attr/colorValues"
+            android:textDirection="ltr" />
+
+    </LinearLayout>
+</LinearLayout>

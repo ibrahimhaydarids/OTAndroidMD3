@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ids.fixot">
+
+    <uses-sdk tools:overrideLibrary="me.aflak.libraries" />
+
+    <uses-feature
+        android:name="android.hardware.fingerprint"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.ids.fixot.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- <permission -->
+    <!-- android:name="com.ids.fixot.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="false"
+        android:configChanges="layoutDirection|locale"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true">
+        <service
+            android:name=".services.GetTradeService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name=".activities.mowazi.MoaziAssembliesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MenuActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LoginFingerPrintActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.PortfolioActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SectorsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.QuickLinksActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SiteMapDataActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.NewsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.NewsDetailsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.FavoritesActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.TradesActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activities.WebPageActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.AccountStatementActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.MoreActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.StockDetailActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.StockActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.StockOrderBookActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.SectorDetailActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.OrderDetailsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.TimeSalesActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.OrdersActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.TradeConfirmationActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activities.MarketIndexActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- android:launchMode="singleInstance" -->
+        <activity
+            android:name=".activities.ErrorAlertActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activities.TopsPagerActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.PdfDisplayActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.Activity_agreement"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.TopsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.FullChartActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ChangePassFromLoginActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MoaziCompanyDetailsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MoaziCompanyChartActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- <activity -->
+        <!-- android:name=".activities.WhatsNewActivity" -->
+        <!-- android:configChanges="layoutDirection|locale" -->
+        <!-- android:label="@string/app_name" -->
+        <!--  -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+        <activity
+            android:name=".activities.MarketQuotes"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MowaziHomeActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MowaziCompaniesActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MowaziCompanyDetailsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MowaziAboutUsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MDealsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activities.mowazi.MowaziNewsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MowaziNewsDetailsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MowaziOrdersSummaryActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activities.mowazi.MowaziOrderDetailPopupActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activities.mowazi.MowaziPlaceOrderActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.mowazi.MowaziMyOrdersActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activities.mowazi.MowaziOnlineOrdersActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activities.mowazi.MowaziDealsActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activities.mowazi.MowaziMyTradesActivity"
+            android:configChanges="layoutDirection|locale"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <service
+            android:name=".AppService"
+            android:stopWithTask="true" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0b7b08618aa79aed9193a9e1e33ccf44dd0cc1e5" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>
